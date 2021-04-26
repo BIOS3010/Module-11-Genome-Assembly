@@ -1,24 +1,10 @@
 # Exercise 1: Genome Assembly
 
-
-`ssh itf-appn-test01.hpc.uio.no `
-
-or
-
-`ssh itf-appn-test02.hpc.uio.no `
-
-Navigate to the shared folder for this exercise: 
-
-`cd /storage/BIOS3010/helle `
-
-Exercise 1: Genome Assembly
-
 We will use two highly-used genome assemblers, canu and flye. Running canu and flye might take some time, so we will start these before continuing with other exercises. 
 
 Each one of you will only run one program according to which group you belong to. 
 Group 1-5: run canu
 Group 6-10: run flye
-
 
 Log on to the appropriate server
 
@@ -32,12 +18,14 @@ navigate to the shared folder for this exercise
 `cd /storage/BIOS3010/helle
 ls -lh`
 
+The data is in the file m64094_200521_143350.ccs.fastq.gz
+
 As you can see, there are two different assembly scripts here. Copy the appropriate one to your home directory like this:
 `cp canu.sh ~/
 cp Flye.sh ~/`
 
 Examine the scripts:
-`Less canu.sh  #press q to quit less`
+`less canu.sh  #press q to quit less`
 
 Both canu and flye are set up as modules on this server and can be activated using module load. Look at the help pages for canu http://gensoft.pasteur.fr/docs/canu/1.6/parameter-reference.html or flye https://github.com/fenderglass/Flye to see if there are any settings you would like to change. To edit the script you can use nano. To start nano type:
 
@@ -52,8 +40,9 @@ Assemblies usually take some time to run. We will therefore run them in the back
 
 You will now enter a new window. Start one of the assembly scripts. 
 
-`sh canu.sh
-sh flye.sh`
+`sh canu.sh`
+or
+`sh flye.sh`
 
 To leave screen press Ctrl + A + D
 
