@@ -78,11 +78,13 @@ To leave screen press Ctrl + A + D
 **Look at the assembly output.**
 
 **Canu**
+
 When complete, the genome assembly will be found in a file called k12.contigs.fasta in the same folder as the canu.sh script.
 
 When the assembly starts, you should have a file called canu.err. This is the log of the assembly process, and it is always good to see how the process has gone. The last line should be “-- Bye.”, then you know it has finished successfully. 
 
 **Flye**
+
 When complete, the genome assembly will be found in a file called assembly.fasta in the same folder as the flye.sh script.
 
 When the assembly starts, you should have a file called flye.err. This is the log of the assembly process, and it is always good to see how the process has gone. At the end there should be some assembly statistics, then you know it has finished successfully. 
