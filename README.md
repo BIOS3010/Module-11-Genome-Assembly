@@ -1,6 +1,6 @@
 # Module-11-Genome-Assembly
 
-The purpose of this exercise is to make and evaluate de novo assemblies. We will use pacbio HiFi reads from the field cuckoo bee (Bombus campestris) from the Darwin tree of life project https://www.darwintreeoflife.org/2021/03/10/bee-genome-release/.
+The purpose of this exercise is to make and evaluate de novo assemblies. We will use pacbio HiFi reads from the field cuckoo bee (*Bombus campestris*) from the Darwin tree of life project https://www.darwintreeoflife.org/2021/03/10/bee-genome-release/.
 
 ![field-cuckoo](https://user-images.githubusercontent.com/46928237/116210234-f67d0280-a742-11eb-88fe-5fe9cae1ed22.jpg)
 
@@ -10,9 +10,9 @@ Here we will perform genome assembly of HiFi reads, which are a type of data pro
 
 I have downloaded and converted the data from bam format to fastq format (to see how look here: link)
 
-Exercise 1: Genome Assembly (https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Exercise1_Genome_Assembly.md)
+**Exercise 1: Genome Assembly (https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Exercise1_Genome_Assembly.md)**
 
-Exercise 2: Genome assembly quality assessment (link)
+**Exercise 2: Genome assembly quality assessment (link)**
 
 ![How-to-get-HiFi-reads_v2](https://user-images.githubusercontent.com/46928237/116210682-6095a780-a743-11eb-93b2-a9cdee96bc7c.png)
 
