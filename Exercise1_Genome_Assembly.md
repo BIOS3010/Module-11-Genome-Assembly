@@ -9,12 +9,15 @@ Group 6-10: run flye
 Log on to the appropriate server
 
 Groups 1 to 5
+
 	`ssh itf-appn-test01.hpc.uio.no`
-or 
-Group 6 to 10
+        
+or Group 6 to 10
+
 	`ssh itf-appn-test02.hpc.uio.no`
 
 navigate to the shared folder for this exercise 
+
 	`cd /storage/BIOS3010/helle
 	ls -lh`
 
