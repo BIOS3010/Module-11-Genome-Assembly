@@ -26,10 +26,12 @@ navigate to the shared folder for this exercise
 The data is in the file m64094_200521_143350.ccs.fastq.gz
 
 As you can see, there are two different assembly scripts here. Copy the appropriate one to your home directory like this:
+
 	`cp canu.sh ~/
 	cp Flye.sh ~/`
 
 Examine the scripts:
+
 	`less canu.sh  #press q to quit less`
 
 Both canu and flye are set up as modules on this server and can be activated using module load. Look at the help pages for canu http://gensoft.pasteur.fr/docs/canu/1.6/parameter-reference.html or flye https://github.com/fenderglass/Flye to see if there are any settings you would like to change. To edit the script you can use nano. To start nano type:
