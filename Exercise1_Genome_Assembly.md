@@ -3,8 +3,10 @@
 We will use two highly-used genome assemblers, canu and flye. Running canu and flye might take some time, so we will start these before continuing with other exercises. 
 
 Each one of you will only run one program according to which group you belong to. 
-Group 1-5: run canu
-Group 6-10: run flye
+
+Group 1 and 6 run canu
+
+Group 2-5 and 7-10 run flye
 
 Log on to the appropriate server
 
