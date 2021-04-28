@@ -10,9 +10,9 @@ Here we will perform genome assembly of HiFi reads, which are a type of data pro
 
 I have downloaded and converted the data from bam format to fastq format, [to see how look here](https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Pre-processing_data.md)
 
-**Exercise 1: Genome Assembly (https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Exercise1_Genome_Assembly.md)**
+[**Exercise 1: Genome Assembly](https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Exercise1_Genome_Assembly.md)
 
-**Exercise 2: Genome assembly quality assessment (link)**
+[**Exercise 2: Genome assembly quality assessment](https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Exercise2.md)
 
 ![How-to-get-HiFi-reads_v2](https://user-images.githubusercontent.com/46928237/116210682-6095a780-a743-11eb-93b2-a9cdee96bc7c.png)
 
