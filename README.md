@@ -8,7 +8,7 @@ Genome assembly is the process of reconstructing a genome from a set of sequenci
 
 Here we will perform genome assembly of HiFi reads, which are a type of data produced using the circular consensus sequencing (CCS) mode on one of the PacBio Sequel Systems. HiFi reads provide base-level resolution with >99.9% single-molecule read accuracy. 
 
-I have downloaded and converted the data from bam format to fastq format, to see how look here (https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Pre-processing_of%20_the_data.md)
+I have downloaded and converted the data from bam format to fastq format, [to see how look here](https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Pre-processing_data.md)
 
 **Exercise 1: Genome Assembly (https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Exercise1_Genome_Assembly.md)**
 
