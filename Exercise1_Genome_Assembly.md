@@ -57,8 +57,9 @@ or
 
 To leave screen press Ctrl + A + D
 
-Is it running? Check by entering top
-Or look at the files .err and .out
+Is it running? Check by typing *top* and pressing enter. You should see your username and the processes you are running. 
+
+Also look at the files .err and .out (insiden the directory you created, either canu_assembly or flye_assembly
 
 To reenter a screen do the following steps. Look at which screens you have using
 
