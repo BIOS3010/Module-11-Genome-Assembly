@@ -21,6 +21,7 @@ or Group 6 to 10
 navigate to the shared folder for this exercise 
 
 `cd /storage/BIOS3010/helle
+
 ls -lh`
 
 The data is in the file m64094_200521_143350.ccs.fastq.gz
@@ -28,6 +29,7 @@ The data is in the file m64094_200521_143350.ccs.fastq.gz
 As you can see, there are two different assembly scripts here. Copy the appropriate one to your home directory like this:
 
 `cp canu.sh ~/
+
 cp Flye.sh ~/`
 
 Examine the scripts:
