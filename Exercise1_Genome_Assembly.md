@@ -93,5 +93,10 @@ When the assembly starts, you should have a file called flye.err. This is the lo
 
 **Congratulations, you have created your (possibly) first assembly that should give you a genome of *Bombus campestris*. In Exercise 2 we will evaluate the genome assembly.**
 
+PS. If you need to restart your script you may have to delete the directory you have created, either canu_assembly or flye_assembly. You can do this by using the following command
+
+`rm -rd foldername´
+
+
 
 
