@@ -38,14 +38,9 @@ Look in the file called busco_insecta.out. It is the last 10 lines or so which a
 
 `tail busco_insecta.out`
 
-
 ````diff
 ! What scores did you get?
-
 
 ````diff
 ! How do interpret these scores? Is the assembly complete? 
 
-
-
-<span style=“color:orange;”> text goes here</span>
