@@ -40,11 +40,11 @@ Look in the file called busco_insecta.out. It is the last 10 lines or so which a
 
 
 ````diff
-! orange
-What scores did you get? 
+! orange What scores did you get?
+````
 
 ````diff
-! orange
-How do interpret these scores? Is the assembly complete? 
+! orange How do interpret these scores? Is the assembly complete? 
+````
 
 
