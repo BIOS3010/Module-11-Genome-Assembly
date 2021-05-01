@@ -46,7 +46,7 @@ Look in the file called busco_insecta.out. It is the last 10 lines or so which a
 ! How do interpret these scores? Is the assembly complete?
 ````
 
-## Assembly contiguity and correctness
+## Assembly contiguity and correctness - QUAST
 
 After doing a genome assembly, one of the questions is often about how correct and contiguous the assembly is. 
 
@@ -78,8 +78,8 @@ Quast creates a subfolder with many different files. Take a look around in it. T
 
 ````diff
 ! How many contigs longer than 50000 bp does your assembly consist of? 
-!What is the N50 length? 
-!How many misassemblies are there?
+! What is the N50 length? 
+! How many misassemblies are there?
 ````
 
 There is also a PDF file which you can download to your computer to look at.
@@ -87,8 +87,8 @@ There is also a PDF file which you can download to your computer to look at.
 I have uploaded the canu and flye quast reports to the github folder so you can compare the assembly programs. 
 
 ````diff
-!What are the main differences between flye and canu? (N50, misassemblies, longest contig…)
-!Which assembly is more contiguous? 
+! What are the main differences between flye and canu? (N50, misassemblies, longest contig…)
+! Which assembly is more contiguous? 
 ````
 
 Navigate to where the reference assembly is located https://www.ebi.ac.uk/ena/browser/view/GCA_905333015 
@@ -98,12 +98,12 @@ Navigate to where the reference assembly is located https://www.ebi.ac.uk/ena/br
 Click on the “Assembly Statistics” on the right hand side. 
 
 ````diff
-How does the reference genome assembly compare to your assembly in terms of contiguity? 
+! How does the reference genome assembly compare to your assembly in terms of contiguity? 
 ````
 
 You can also download the sequence report (click “Sequence Report” on the right hand side. 
 
 ````diff
-How many chromosomes does the assembly contain? 
+! How many chromosomes does the assembly contain? 
 ````
 
