@@ -1,4 +1,6 @@
-# Exercise 2 - Assembly completeness - BUSCO
+# Exercise 2 - Assembly Quality
+
+## Assembly completeness - BUSCO
 
 We like to use BUSCO to assess the completeness of an assembly. BUSCO (https://busco.ezlab.org/) uses a set of conserved genes that should be present in the species we are interested in. For instance, if you run it on a mammalian species, it tries to find 4104 genes. A high quality genome assembly should have the vast majority of these present and with exons in the correct order and orientation with regards to each other. In vertebrates, genes can span several 100 kbp, so if most genes are found complete, it is likely that the genome assembly is of high quality.
 
