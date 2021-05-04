@@ -30,11 +30,11 @@ Open up a screen
 
 Check to see if it is running using top and checking the .err and .log files like previously. This script will take some time to complete. 
 
-As an example, when I ran BUSCO with the insect dataset on the reference genome, we got this:     
+An example BUSCO report looks like this:
 
 C:99.9%[S:99.9%,D:0.0%],F:0.1%,M:-0.0%,n:781
 
-This means that of the 781 genes, 99.9 % were complete and 0.1 % were incomplete. 
+This means that 99.9 % were complete and 0.1 % were incomplete. 
 
 Look in the file called busco_insecta.out. It is the last 10 lines or so which are important, so you can for instance write:
 
