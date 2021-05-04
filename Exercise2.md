@@ -14,9 +14,9 @@ I have run BUSCO using the insect dataset, **insecta_odb10**. If you want you co
 
 You can find two scripts in the folder shared folder, copy the one set up for your assembly to your home directory:
 
-`cp/storage/BIOS3010/helle/busco_flye.sh ~/`
+`cp /storage/BIOS3010/helle/busco_flye.sh ~/`
 
-`cp/storage/BIOS3010/helle/busco_canu.sh ~/`
+`cp/ storage/BIOS3010/helle/busco_canu.sh ~/`
 
 Change name of gene set if you want using *nano*, edit the *-l insecta_odb10* to another database from the list you looked at in the step above. *If your assembly did not complete, copy one of the finished assembly that I have put in the folders /storage/BIOS3010/helle/canu_assembly or /storage/BIOS3010/helle/flye_assembly to your home directory and run busco on this.*
 
