@@ -1,0 +1,110 @@
+INFO:	***** Start a BUSCO v4.0.5 analysis, current time: 05/01/2021 11:54:04 *****
+INFO:	Configuring BUSCO with /storage/software/software/BUSCO/4.0.5-foss-2019b-Python-3.7.4/config/config.ini
+INFO:	Mode is genome
+INFO:	Input file is canu_assembly.contigs.fasta
+INFO:	Downloading information on latest versions of BUSCO data...
+INFO:	Downloading file 'https://busco-data.ezlab.org/v4/data/lineages/insecta_odb10.2020-09-10.tar.gz'
+INFO:	Decompressing file '/home/hellb/canu_assembly2/busco_downloads/lineages/insecta_odb10.tar.gz'
+WARNING:	You are using BLAST version 2.9. This is known to yield inconsistent results when multithreading. BLAST will run on a single core as a result. For performance improvement, please revert to BLAST 2.2 or 2.3.
+INFO:	Running BUSCO using lineage dataset insecta_odb10 (eukaryota, 2020-09-10)
+INFO:	Creating BLAST database with input file
+INFO:	Running 1 job(s) on makeblastdb
+INFO:	[makeblastdb]	1 of 1 task(s) completed
+INFO:	Running a BLAST search for BUSCOs against created database
+INFO:	Running 1 job(s) on tblastn
+INFO:	[tblastn]	1 of 1 task(s) completed
+INFO:	Running Augustus gene predictor on BLAST search results.
+INFO:	Running Augustus prediction using fly as species:
+INFO:	Running 1586 job(s) on augustus
+INFO:	[augustus]	159 of 1586 task(s) completed
+INFO:	[augustus]	318 of 1586 task(s) completed
+INFO:	[augustus]	476 of 1586 task(s) completed
+INFO:	[augustus]	635 of 1586 task(s) completed
+INFO:	[augustus]	793 of 1586 task(s) completed
+INFO:	[augustus]	952 of 1586 task(s) completed
+INFO:	[augustus]	1111 of 1586 task(s) completed
+INFO:	[augustus]	1269 of 1586 task(s) completed
+INFO:	[augustus]	1428 of 1586 task(s) completed
+INFO:	[augustus]	1586 of 1586 task(s) completed
+INFO:	Extracting predicted proteins...
+INFO:	***** Run HMMER on gene sequences *****
+INFO:	Running 1511 job(s) on hmmsearch
+INFO:	[hmmsearch]	152 of 1511 task(s) completed
+INFO:	[hmmsearch]	303 of 1511 task(s) completed
+INFO:	[hmmsearch]	454 of 1511 task(s) completed
+INFO:	[hmmsearch]	605 of 1511 task(s) completed
+INFO:	[hmmsearch]	756 of 1511 task(s) completed
+INFO:	[hmmsearch]	907 of 1511 task(s) completed
+INFO:	[hmmsearch]	1058 of 1511 task(s) completed
+INFO:	[hmmsearch]	1209 of 1511 task(s) completed
+INFO:	[hmmsearch]	1360 of 1511 task(s) completed
+INFO:	[hmmsearch]	1511 of 1511 task(s) completed
+INFO:	Starting second step of analysis. The gene predictor Augustus is retrained using the results from the initial run to yield more accurate results.
+INFO:	Extracting missing and fragmented buscos from the file ancestral_variants...
+INFO:	Running a BLAST search for BUSCOs against created database
+INFO:	[tblastn]	1 of 1 task(s) completed
+INFO:	Training Augustus using Single-Copy Complete BUSCOs:
+INFO:	Converting predicted genes to short genbank files
+INFO:	Running 1277 job(s) on gff2gbSmallDNA.pl
+INFO:	[gff2gbSmallDNA.pl]	128 of 1277 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	256 of 1277 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	384 of 1277 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	511 of 1277 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	639 of 1277 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	767 of 1277 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	894 of 1277 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	1022 of 1277 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	1150 of 1277 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	1277 of 1277 task(s) completed
+INFO:	All files converted to short genbank files, now running the training scripts
+INFO:	Running 1 job(s) on new_species.pl
+INFO:	[new_species.pl]	1 of 1 task(s) completed
+INFO:	Running 1 job(s) on etraining
+INFO:	[etraining]	1 of 1 task(s) completed
+INFO:	Re-running Augustus with the new metaparameters, number of target BUSCOs: 79
+INFO:	Running Augustus gene predictor on BLAST search results.
+INFO:	Running Augustus prediction using BUSCO_Busco_canu2 as species:
+INFO:	[augustus]	10 of 99 task(s) completed
+INFO:	[augustus]	20 of 99 task(s) completed
+INFO:	[augustus]	30 of 99 task(s) completed
+INFO:	[augustus]	40 of 99 task(s) completed
+INFO:	[augustus]	50 of 99 task(s) completed
+INFO:	[augustus]	60 of 99 task(s) completed
+INFO:	[augustus]	70 of 99 task(s) completed
+INFO:	[augustus]	80 of 99 task(s) completed
+INFO:	[augustus]	90 of 99 task(s) completed
+INFO:	[augustus]	99 of 99 task(s) completed
+INFO:	Extracting predicted proteins...
+INFO:	***** Run HMMER on gene sequences *****
+INFO:	[hmmsearch]	11 of 108 task(s) completed
+INFO:	[hmmsearch]	22 of 108 task(s) completed
+INFO:	[hmmsearch]	33 of 108 task(s) completed
+INFO:	[hmmsearch]	44 of 108 task(s) completed
+INFO:	[hmmsearch]	55 of 108 task(s) completed
+INFO:	[hmmsearch]	65 of 108 task(s) completed
+INFO:	[hmmsearch]	76 of 108 task(s) completed
+INFO:	[hmmsearch]	87 of 108 task(s) completed
+INFO:	[hmmsearch]	98 of 108 task(s) completed
+INFO:	[hmmsearch]	108 of 108 task(s) completed
+INFO:	Results:	C:99.6%[S:98.8%,D:0.8%],F:0.1%,M:0.3%,n:1367	   
+
+INFO:	
+
+	--------------------------------------------------
+	|Results from dataset insecta_odb10               |
+	--------------------------------------------------
+	|C:99.6%[S:98.8%,D:0.8%],F:0.1%,M:0.3%,n:1367     |
+	|1361	Complete BUSCOs (C)                       |
+	|1350	Complete and single-copy BUSCOs (S)       |
+	|11	Complete and duplicated BUSCOs (D)        |
+	|2	Fragmented BUSCOs (F)                     |
+	|4	Missing BUSCOs (M)                        |
+	|1367	Total BUSCO groups searched               |
+	--------------------------------------------------
+INFO:	BUSCO analysis done with WARNING(s). Total running time: 4431 seconds
+
+***** Summary of warnings: *****
+WARNING:busco.GenomeAnalysis	You are using BLAST version 2.9. This is known to yield inconsistent results when multithreading. BLAST will run on a single core as a result. For performance improvement, please revert to BLAST 2.2 or 2.3.
+
+INFO:	Results written in /home/hellb/canu_assembly2/Busco_canu2
+
