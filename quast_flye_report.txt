@@ -1,0 +1,49 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     assembly      
+# contigs (>= 0 bp)          376           
+# contigs (>= 1000 bp)       348           
+# contigs (>= 5000 bp)       310           
+# contigs (>= 10000 bp)      282           
+# contigs (>= 25000 bp)      177           
+# contigs (>= 50000 bp)      119           
+Total length (>= 0 bp)       266656392     
+Total length (>= 1000 bp)    266636760     
+Total length (>= 5000 bp)    266539948     
+Total length (>= 10000 bp)   266332848     
+Total length (>= 25000 bp)   264495157     
+Total length (>= 50000 bp)   262471127     
+# contigs                    375           
+Largest contig               10077791      
+Total length                 266655963     
+Reference length             544522        
+GC (%)                       37.20         
+Reference GC (%)             50.53         
+N50                          5554282       
+NG50                         10077791      
+N75                          3496139       
+NG75                         10077791      
+L50                          20            
+LG50                         1             
+L75                          35            
+LG75                         1             
+# misassemblies              36            
+# misassembled contigs       18            
+Misassembled contigs length  237988        
+# local misassemblies        17            
+# scaffold gap ext. mis.     0             
+# scaffold gap loc. mis.     0             
+# unaligned mis. contigs     80            
+# unaligned contigs          219 + 135 part
+Unaligned length             265695097     
+Genome fraction (%)          39.776        
+Duplication ratio            4.440         
+# N's per 100 kbp            0.45          
+# mismatches per 100 kbp     6294.16       
+# indels per 100 kbp         540.23        
+Largest alignment            14876         
+Total aligned length         967057        
+NGA50                        6227          
+NGA75                        5967          
+LGA50                        36            
+LGA75                        58            
