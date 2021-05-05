@@ -96,7 +96,7 @@ When the assembly starts, you should have a file called flye.err. This is the lo
 
 PS. If you need to restart your script you may have to delete the directory you have created, either canu_assembly or flye_assembly. You can do this by using the following command
 
-`rm -rd foldername´
+`rm -rd foldername
 
 
 
