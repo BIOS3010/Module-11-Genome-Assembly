@@ -4,7 +4,7 @@
 
 We like to use BUSCO to assess the completeness of an assembly. BUSCO (https://busco.ezlab.org/) uses a set of conserved genes that should be present in the species we are interested in. For instance, if you run it on a mammalian species, it tries to find 4104 genes. A high quality genome assembly should have the vast majority of these present and with exons in the correct order and orientation with regards to each other. In vertebrates, genes can span several 100 kbp, so if most genes are found complete, it is likely that the genome assembly is of high quality.
 
-`Module load BUSCO/4.0.5-foss-2019b-Python-3.7.4`
+`module load BUSCO/4.0.5-foss-2019b-Python-3.7.4`
 
 Look at the different BUSCO datasets: 
 
@@ -22,7 +22,8 @@ Change name of gene set if you want using *nano*, edit the *-l insecta_odb10* to
 
 Both scripts are set up to run BUSCO on assemblies we created,
 
-Open up a screen
+Open up a screen. 
+You may have to move the busco script to your assembly folder. Or edit the script so that the paths are correct in regard to your assembly.
 
 `screen -S Busco_canu`
 
@@ -69,6 +70,7 @@ Run Quast on your genome assembly. In the shared folder (/storage/BIOS3010/helle
 `mkdir quast_canu`
 
 if you want to run it on the canu assembly. Enter the folder, and copy the correct script to this folder. 
+You may have to move the quast script to your assembly folder. Or edit the script so that the paths are correct in regard to your assembly.
 
 `cp /storage/BIOS3010/helle/quast_flye.sh ~/flye_canu/`
 
