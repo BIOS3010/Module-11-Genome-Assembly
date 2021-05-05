@@ -30,7 +30,7 @@ As you can see, there are two different assembly scripts here. Copy the appropri
 
 `cp canu.sh ~/`
 
-`cp Flye.sh ~/`
+`cp flye.sh ~/`
 
 Examine the scripts:
 
