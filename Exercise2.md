@@ -28,6 +28,10 @@ Open up a screen
 
 (Ctrl + A + D to exit screen)
 
+Start the script:
+
+`sh busco_canu.sh`
+
 Check to see if it is running using top and checking the .err and .log files like previously. This script will take some time to complete. 
 
 An example BUSCO report looks like this:
