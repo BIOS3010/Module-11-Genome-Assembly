@@ -47,8 +47,7 @@ Look in the file called busco_insecta.out. It is the last 10 lines or so which a
 
 ````diff
 ! What scores did you get?
-
-! How do interpret these scores? Is the assembly complete?
+! How do you interpret these scores? Is the assembly complete?
 ````
 
 ## Assembly contiguity and correctness - QUAST
