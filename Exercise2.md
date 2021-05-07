@@ -6,6 +6,10 @@ We like to use BUSCO to assess the completeness of an assembly. BUSCO (https://b
 
 `module load BUSCO/4.0.5-foss-2019b-Python-3.7.4`
 
+`export BUSCO_CONFIG_FILE=/storage/software/software/BUSCO/4.0.5-foss-2019b-Python-3.7.4/config/config.ini`
+
+`export AUGUSTUS_CONFIG_PATH=/storage/BIOS3010/BUSCO/config/`
+
 Look at the different BUSCO datasets: 
 
 `busco --list-datasets`
