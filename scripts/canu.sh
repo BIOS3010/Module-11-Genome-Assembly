@@ -1,0 +1,19 @@
+# Unload any modules loaded previously
+# Recommended for reproducibility
+module --force purge
+
+# The modules need to be loaded here also
+module load StdEnv canu/2.1.1-GCCcore-9.3.0-Java-11
+
+# Create a folder for the assembly
+# -p: skip if it is already there
+mkdir -p ~/canu_assembly
+cd ~/canu_assembly
+
+# backslash allows us to spread a command across several lines for easier readability
+# change -d to the cirrect folder if needed
+canu -p k12 -d  ~/canu_assembly maxThreads=4 useGrid=false genomeSize=260m \
+-pacbio-hifi /storage/BIOS3010/Genome_assembly/m64094_200521_143350.ccs.fastq.gz \
+1> canu.out 2> canu.err
+
+# 1> redirects content on stdout to a file, while 2> redirects stderr to a separate file.
