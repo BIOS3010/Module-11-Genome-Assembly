@@ -5,7 +5,7 @@ module --force purge
 # To check if stranded: https://www.biostars.org/p/66627/
 
 # The modules need to be loaded here also
-module load Flye/2.8.3-foss-2020a-Python-3.8.2
+module load Flye/2.9-GCC-9.3.0
 
 # Create a folder for the assembly
 # -p: skip if it is already there
