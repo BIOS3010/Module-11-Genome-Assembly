@@ -6,11 +6,11 @@ Downloading files to your computer. Open up a new terminal window. You are now o
 
 You can also use rsync to transfer files on the cluster, this is particularly good for big files, like the assemblies:
 
-`rsync -avz  /storage/BIOS3010/helle/canu_assembly  ~/`
+`rsync -avz  /storage/BIOS3010/Genome_assembly/canu_assembly  ~/`
 
 Change directory (move into a different folder:
 
-`cd /storage/BIOS3010/helle/canu_assembly `
+`cd /storage/BIOS3010/Genome_assembly/canu_assembly `
 
 Go up one level in the directory: 
 
