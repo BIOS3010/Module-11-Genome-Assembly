@@ -1,13 +1,11 @@
 # Unload any modules loaded previously
-# Recommended for reproducibility
 module --force purge
 
 # The modules need to be loaded here also
-module load StdEnv canu/2.1.1-GCCcore-9.3.0-Java-11
+module load canu/2.1.1-GCCcore-9.3.0-Java-11
 
 # Create a folder for the assembly
-# -p: skip if it is already there
-mkdir -p ~/canu_assembly
+mkdir ~/canu_assembly
 cd ~/canu_assembly
 
 # backslash allows us to spread a command across several lines for easier readability
