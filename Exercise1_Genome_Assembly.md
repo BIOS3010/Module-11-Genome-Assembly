@@ -111,7 +111,7 @@ When the assembly starts, you should have a file called `canu.err` or `flye.err`
 
 **Congratulations, you have created your (possibly) first assembly that should give you a genome of *Bombus campestris*.**
 
-When complete, the genome assembly will be found in a file called `canu_assembly.contigs.fasta` (canu) or `assembly.fasta` (flye) in the same folder as the `canu.sh` or `flye.sh` script.
+When complete, the genome assembly will be found in a file called `canu_assembly.contigs.fasta` (canu) or `assembly.fasta` (flye) in the same folder as the `canu.err` or `flye.err` files.
 
 In Exercise 2 we will evaluate the genome assemblies.
 
