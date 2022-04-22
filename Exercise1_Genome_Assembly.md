@@ -37,18 +37,26 @@ Examine the scripts:
 
 `less canu.sh  #press q to quit less`
 
-Both canu and flye are set up as modules on this server and can be activated using `module load`. Look at the help pages for canu http://gensoft.pasteur.fr/docs/canu/1.9/parameter-reference.html#parameter-reference or flye https://github.com/fenderglass/Flye to see if there are any settings you would like to change.
-
+Both the canu and flye programs are set up as modules on this server and can be activated using `module load`.
 
 You should be able to use the script 'as is'. If you still would like to edit the script, you can use `nano`. To start `nano` type:
 
 `nano canu.sh`
 
-One thing you could do is tchange the name of the location of the folder the assembly will be created in.
+One thing you could do is change the name of the location of the folder the assembly will be created in.
 
 Press Ctrl+X to exit; `nano` will ask you whether you want to save any changes, and if so, to choose a name for your file. Press enter to keep the same name.
 
 (PS, on a Mac, Cmd+C and Cmd+V works in the terminal and while editing. It could be something similar on Windows, but we are not so familiar with that platform.)
+
+Look at the help pages for canu http://gensoft.pasteur.fr/docs/canu/1.9/tutorial.html or flye https://github.com/fenderglass/Flye/blob/flye/docs/USAGE.md to see if you understand all the settings.
+
+```diff
+! How many threads is the program allowed to use?
+! What does this mean and why do we allow more than one?
+```
+
+## Starting the assembly
 
 Assemblies usually take some time to run. We will therefore run them in the background in a so-called 'screen' so that it continues to run when you lose the connection (e.g., close the terminal window or lose internet connectivity).
 
