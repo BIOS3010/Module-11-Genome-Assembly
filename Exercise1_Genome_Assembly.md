@@ -83,27 +83,33 @@ Press `q` to leave `top`.
 Also look at the files `.err` and `.out` (inside the directory you created, either `canu_assembly` or `flye_assembly`),
 see also below.
 
-To 're-enter' a screen do the following steps. Look at which screens you have using
+To 're-enter' a screen type
 
-`screen -ls`
+`screen -rd`
 
-You will see a list like this:
+This will take you back to your 'screen' terminal.
+If you have more than one screen running,
+you will see a list like this:
 
 ```
-There are screens on:
+There are several suitable screens on:
 	1735995.canu	(Detached)
 	1464188.134235	(Detached)
+Type "screen [-d] -r [pid.]tty.host" to resume one of them.
 ```
 
 Use the name you used yourself, or the number to the left to 're-enter' a specific screen, e.g:
 
-`screen -R canu`
+`screen -rd canu`
 
 eller
 
-`screen -R 1735995`
+`screen -rd 1735995`
 
 To leave screen again press Ctrl + A + D as before.
+
+If you are done with a screen, and want to terminate it,
+re-enter it and type `exit`.
 
 ##  Following progress
 
