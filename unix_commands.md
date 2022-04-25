@@ -1,3 +1,6 @@
+
+**NOTE** some of the commands in this file are outdated.
+
 # Helpful commands
 
 Downloading files to your computer. Open up a new terminal window. You are now on your local computer
@@ -12,7 +15,7 @@ Change directory (move into a different folder:
 
 `cd /storage/BIOS3010/Genome_assembly/canu_assembly `
 
-Go up one level in the directory: 
+Go up one level in the directory:
 
 `cd ../`
 
@@ -59,11 +62,3 @@ Look at the list of screens:
 Reopen a specific screen:
 
 `screen -R 30867`
-
-
-
-
-
-
-
-
