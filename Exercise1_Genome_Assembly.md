@@ -4,16 +4,20 @@
 
 We will use two highly-used genome assemblers, canu and flye. **Canu** is made to assemble PacBio reads using **K-mer-based overlap computation**. It is derived from an assembler called Celera Assembler, which was made by Celera, the private company that competed against the Human Genome Project and were the quickest to sequence and assemble the human genome. It was first used to assemble Drosophila which was published in 2000. Celera is no longer maintained, but parts of the code lives on in canu. It first uses a k-mer hashing algorithm to compute overlaps between the error-prone input reads while attempting to avoid mistaken overlaps from repetitive regions and then uses these overlaps to correct the reads. Next, reads containing segments unsupported by overlaps are trimmed or broken into multiple reads. Finally, Canu uses a modified version of the best overlap graph algorithm to assemble the corrected and trimmed reads into contigs. **Flye** is a de novo assembler for single molecule sequencing reads, such as those produced by PacBio and Oxford Nanopore Technologies. Flye uses a **de Bruijn graph–based algorithm** rather than an overlap graph–based algorithm. The modified de Bruijn graph, called an A-Bruijn graph, has the repeat-resolving capabilities of a classic de Bruijn graph but is better able to handle read errors.
 
-Running canu and flye might take some time, so we will start these and let them finish before continuing with other exercises. Each one of you will only run one program according to which group you belong to.
+Running canu and flye might take some time, so we will start these and let them finish before continuing with other exercises. Each one of you will only run one program:
+
+**If your birthday is in an odd-numbered month**:
+* run canu for the assembly
+
+**If your birthday is in an even-numbered month**:
+* run flye for the assembly
+
+Which server to use:
 
 **Odd-numbered groups**:
-
-* run canu for the assembly
 * use `itf-appn-test01.hpc.uio.no`
 
 **Even-numbered groups**:
-
-* run flye for the assembly
 * use `itf-appn-test02.hpc.uio.no`
 
 Log on to the appropriate server

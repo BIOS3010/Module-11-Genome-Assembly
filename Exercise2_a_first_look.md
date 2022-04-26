@@ -4,7 +4,7 @@ Today, we will make sure the assembly has finished.
 Look at the sections **Following progress** and **When is the assembly done?** in the instructions for **Exercise 1: Genome Assembly**
 and check whether your assembly has finished.
 
-Pair up with someone who used the other pgoram (canu or flye)
+Pair up with someone who used the other program (canu or flye)
 so you can compare assemblies.
 
 Use these files:
