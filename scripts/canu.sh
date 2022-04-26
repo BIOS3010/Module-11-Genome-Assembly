@@ -10,7 +10,7 @@ cd ~/canu_assembly
 
 # backslash allows us to spread a command across several lines for easier readability
 # change -d to the correct folder if needed
-canu -p k12 -d  ~/canu_assembly maxThreads=8 useGrid=false genomeSize=260m \
+canu -p canu_assembly -d  ~/canu_assembly maxThreads=8 useGrid=false genomeSize=260m \
 -pacbio-hifi /storage/BIOS3010/Genome_assembly/m64094_200521_143350.ccs.fastq.gz \
 1> canu.out 2> canu.err
 

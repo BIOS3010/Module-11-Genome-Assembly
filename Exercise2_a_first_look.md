@@ -8,7 +8,7 @@ Pair up with someone who used the other program (canu or flye)
 so you can compare assemblies.
 
 Use these files:
-* canu: `k12.report`, look at the end of the file
+* canu: `canu_assembly.report`, look at the end of the file
 * flye: `flye.log`, look at the end of the file
 
 Answer the following questions:
@@ -20,7 +20,7 @@ Answer the following questions:
 ! What does `N50` mean?
 ```
 
-**NOTE** For canu, the NG50, which is a variant of the N50, is in the table at the end of the file `k12.report`, the line with `50` and the (first) column `NG (bp)`
+**NOTE** For canu, the NG50, which is a variant of the N50, is in the table at the end of the file `canu_assembly.report`, the line with `50` and the (first) column `NG (bp)`
 
 Finally, answer this question:
 
