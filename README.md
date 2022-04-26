@@ -14,6 +14,6 @@ Day 1: [Exercise 1: Genome assembly](https://github.com/BIOS3010/Module-11-Genom
 
 Day 2: [Exercise 2: A first look at our genome assembly](https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Exercise2_a_first_look.md)
 
-Day 3 & 4: [**Exercise 2: Genome assembly quality assessment](https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Exercise2.md)
+Day 3 & 4: [Exercise 3: Genome assembly quality assessment](https://github.com/BIOS3010/Module-11-Genome-Assembly/blob/main/Exercise3.md)
 
 ![How-to-get-HiFi-reads_v2](https://user-images.githubusercontent.com/46928237/116210682-6095a780-a743-11eb-93b2-a9cdee96bc7c.png)
