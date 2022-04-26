@@ -13,6 +13,6 @@ cd ~/flye_assembly
 # add the read files in a so-called shell variable
 PACBIO=/storage/BIOS3010/Genome_assembly/m64094_200521_143350.ccs.fastq.gz
 
-flye -t 4 --pacbio-hifi "$PACBIO" -g 260m -o .  1> flye.out 2> flye.err
+flye -t 8 --pacbio-hifi "$PACBIO" -g 260m -o .  1> flye.out 2> flye.err
 
 # 1> redirects content on stdout to a file, while 2> redirects stderr to a separate file.
