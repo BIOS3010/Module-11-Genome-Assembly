@@ -25,7 +25,7 @@ Answer the following questions:
 Finally, answer this question:
 
 ```diff
-! can you, based on the answers to the questions above, say something about which assembly (canu or flye) is best, and why?
+! can you, based on the answers to the questions above, say which assembly (canu or flye) is best, and why?
 ```
 
 ## Other things to try
@@ -33,3 +33,7 @@ Finally, answer this question:
 ### Run the other program also
 
 If you have run the canu assembly, you could start the flye assembly now, and vise versa.
+
+### Write your own program to calculate N50
+
+Use your Python and Biopython knowledge to write a Python program that takes a fasta file with sequences as input, and prints out the N50 for the sequences.
