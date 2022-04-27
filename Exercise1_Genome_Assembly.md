@@ -33,11 +33,21 @@ The data is in the file `m64094_200521_143350.ccs.fastq.gz`
 
 As you can see, there are two different assembly scripts here. Copy the appropriate one to your home directory like this:
 
-`cp canu.sh ~/`
+```
+cd ~
+cp /storage/BIOS3010/Genome_assembly/canu.sh .
+```
 
-`cp flye.sh ~/`
+OR
 
-Examine the scripts:
+```
+cd ~
+cp /storage/BIOS3010/Genome_assembly/flye.sh .
+```
+
+Note the dot `.` at the end of the command, which indicates 'the current directory' as destination.
+
+Now examine the scripts:
 
 `less canu.sh  #press q to quit less`
 

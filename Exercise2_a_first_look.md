@@ -25,7 +25,7 @@ Answer the following questions:
 Finally, answer this question:
 
 ```diff
-! can you, based on the answers to the questions above, say which assembly (canu or flye) is best, and why?
+! Can you, based on the answers to the questions above, say which assembly (canu or flye) is best, and why?
 ```
 
 ## Other things to try
