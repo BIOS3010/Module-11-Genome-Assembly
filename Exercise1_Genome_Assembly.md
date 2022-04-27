@@ -135,7 +135,7 @@ When the assembly starts, you should have a file called `canu.err` or `flye.err`
 ##  When is the assembly done?
 
 * Canu: if the last line in `canu.err` is `-- Bye.`, then you know it has finished successfully
-* Flye: When there is be some assembly statistics at the end of `flye.err`, then you know it has finished successfully
+* Flye: is the last in in `flye.err` has `INFO: Final assembly: /home/username/flye_assembly/assembly.fasta`, then you know it has finished successfully
 
 **Congratulations, you have created your (possibly) first assembly that should give you a genome of *Bombus campestris*.**
 
