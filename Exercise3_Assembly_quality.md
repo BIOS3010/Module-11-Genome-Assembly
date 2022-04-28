@@ -21,7 +21,7 @@ We like to use BUSCO to assess the completeness of an assembly. BUSCO (https://b
 
 First, let's do the assembly QC in a new folder, for example `~/assembly_qc`. Create this folder and `cd` into it.
 
-Second, as the BUSCO analysis will take some time, we run it again inside a *screen*. It is advised to start a new screen for this.
+Second, as the BUSCO analysis will take some time (an hour or so), we run it again inside a *screen*. It is advised to start a new screen for this.
 
 *NOTE* feel free to terminate any other screens you still may have by re-entering them and writing `exit`.
 
@@ -106,7 +106,7 @@ module load QUAST/5.0.2-foss-2020a-Python-3.8.2
 ```
 
 Work in your `assembly_qc` folder and use `screen` as before -
-for example an existing screen.
+the aalysis will take an hour or so.
 
 To run Quast on the canu assembly use:
 
