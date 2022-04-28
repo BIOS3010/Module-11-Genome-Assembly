@@ -1,5 +1,18 @@
 # Exercise 3: Genome assembly quality assessment
 
+Now we have put together the same reads using two different programs,
+and obtained different assemblies. Which one is better?
+
+To help us answer this, we will use two programs.
+
+* BUSCO checks whether a set of conserved genes, that we can assume should be present in the species, are in fact in the assembly
+* Quast allows us to compare the assemblies to a reference genome, which is a the best available assembly for this species
+
+If you do not have a reference genome, a tool like BUSCO is very useful.
+If you do have a reference genome, you can check your assembly against it using Quast.
+
+**Today** we will start the analysis with both programs. These will run for a while, so we will interpret the results in the next lab.
+
 ## Assembly completeness - BUSCO
 
 We like to use BUSCO to assess the completeness of an assembly. BUSCO (https://busco.ezlab.org/) uses a set of conserved genes that should be present in the species we are interested in. For instance, if you run it on a mammalian species, it tries to find 4104 genes. A high quality genome assembly should have the vast majority of these present and with exons in the correct order and orientation with regards to each other. In vertebrates, genes can span several 100 kbp, so if most genes are found complete, it is likely that the genome assembly is of high quality.
@@ -8,7 +21,7 @@ We like to use BUSCO to assess the completeness of an assembly. BUSCO (https://b
 
 First, let's do the assembly QC in a new folder, for example `~/assembly_qc`. Create this folder and `cd` into it.
 
-Second, as the BUSCO analysis will take some time, we run it again inside a *screen*. It is advised to start a new screen for this
+Second, as the BUSCO analysis will take some time, we run it again inside a *screen*. It is advised to start a new screen for this.
 
 *NOTE* feel free to terminate any other screens you still may have by re-entering them and writing `exit`.
 
@@ -22,7 +35,7 @@ To have a look at the available BUSCO gene sets for different species use:
 
 `busco --list-datasets`
 
-We will all run BUSCO using the insect dataset, **insecta_odb10**. If you want you could try a different one in addition, for instance for arthropods or eukaryotes.
+We will all run BUSCO using the insect dataset, **insecta_odb10**.
 
 To run BUSCO on the canu assembly use:
 
@@ -48,7 +61,10 @@ busco \
 
 As always, change `username` with your username and make sure the path to the assembly file is correct.
 
-**NOTE** *If your assembly did not complete*, copy one of the finished assembly that we made available in the folders `/storage/BIOS3010/Genome_assembly/canu_assembly` or `/storage/BIOS3010/Genome_assembly/flye_assembly` to your home directory and run BUSCO on it.
+**NOTE** *If your assembly did not complete*, use one of the finished assemblies that we made available.
+Do not copy the assembly, but point BUSCO to the assembly fasta file:
+* canu: `/storage/BIOS3010/Genome_assembly/canu_assembly/canu_assembly.contigs.fasta`
+* flye: `/storage/BIOS3010/Genome_assembly/flye_assembly/assembly.fasta`
 
 In the command for running BUSCO:
 * we use the backslash `\` so we can write the command over multiple lines, making it easier to read
@@ -61,34 +77,15 @@ In the command for running BUSCO:
 
 Exit the screen with `Ctrl + A + D` as before.
 
-Check to see if BUSCO is running using `top` and checking the `.out` and `.log` files.
+Check to see if BUSCO is running using `top` and checking the `.out` file.
 
-An example BUSCO report looks like this:
+BUSCO is finished when the `.out` file has a table of the results at the end, followed by three lines of which the first reads `INFO:   BUSCO analysis done. Total running time: XXX seconds`.
 
-`C:99.9%[S:99.9%,D:0.0%],F:0.1%,M:-0.0%,n:781`
-
-This means that 99.9 % were complete and 0.1 % were incomplete.
-
-Look in the file called `busco_insecta.out`. It is the last 10 lines or so which are important, so you can for instance write:
-
-`tail busco_insecta.out`
-
-````diff
-! What scores did you get?
-! How do you interpret these scores? Is the assembly complete?
-````
-
-Pair up with someone who used the other program (canu or flye)
-so you can compare BUSCO results.
-For the question below, have a look inside the `canu_busco` or `flye_busco` folder and check the files in there.
-
-````diff
-! Compare the list of missing genes. Are the same genes missing in both assemblies?
-````
+Once BUSCO is running, proceed to start Quast as described below.
 
 ## Assembly contiguity and correctness - QUAST
 
-After doing a genome assembly, one of the questions is often about how correct and contiguous the assembly is. The term *contiguous* refers to how well the different seuqences have been put together. An assembly is mor contiguous the fewer contigs it has.
+After doing a genome assembly, one of the questions is often about how correct and contiguous the assembly is. The term *contiguous* refers to how well the different sequences have been put together. An assembly is more contiguous the fewer contigs it has.
 
 It is not straight-forward to evaluate correctness for many projects. However, for *Bombus campestris* we have a reference to compare to downloaded from https://www.ebi.ac.uk/ena/browser/view/GCA_905333015, located in the shared folder here:
 
@@ -101,8 +98,6 @@ This genome was generated using the following pipeline (from https://www.ebi.ac.
 This reference is the best available genome assembly for this species. We will assume it has no errors - but we can never be sure. It likely will have some errors, but probably not many.
 
 We can use Quast (http://quast.sourceforge.net) to find many different metrics of our genome assembly such as N50, number of misassemblies relative to the reference, and number of genes. See more of the results given here: http://quast.sourceforge.net/docs/manual.html#sec3.1.
-
-Note that we do not have *annotated* the genome yet. Annotation is the process that finds all the genes (and more). For our quast analysis, we will thus use the option `--gene-finding`.
 
 To get started with Quast, we need to run the following commands:
 
@@ -119,8 +114,6 @@ To run Quast on the canu assembly use:
 quast \
 /home/username/canu_assembly/canu_assembly.contigs.fasta \
 -r /storage/BIOS3010/Genome_assembly/CAJOSK02.fasta  \
---gene-finding \
---conserved-genes-finding \
 -o canu_quast \
 -t 2 \
 1> canu_quast.out 2> canu_quast.err
@@ -131,9 +124,7 @@ For flye, use
 ```
 quast \
 /home/username/flye_assembly/assembly.fasta \
--r /storage/BIOS3010/Genome_assembly/CAJOSK02.fasta  \
---gene-finding \
---conserved-genes-finding \
+-r /storage/BIOS3010/Genome_assembly/CAJOSK02.fasta \
 -o flye_quast \
 -t 2 \
 1> flye_quast.out 2> flye_quast.err
@@ -144,51 +135,37 @@ As always, change `username` with your username and make sure the path to the as
 Here:
 * we use the path to the assembly fasta file as first argument
 * `-r` indicates the path to the reference genome that Quast uses for comparison
-* `--gene-finding` is explained above
-
---conserved-genes-finding \
 * `-o` indicates the name of the folder Quast will write its output in
 * `-t 2` means use 2 compute threads (CPUs)
 
-
-If you want to run it on your own assembly, make sure the paths are correct.
+If you want to run it on your own assembly, or the one we prvided in `/storage/BIOS3010/Genome_assembly`, make sure the paths are correct.
 
 Exit the screen with `Ctrl + A + D` as before.
 
 Check to see if Quast is running using `top` and checking the `.out` file.
 
+Quast is finished when the `.out` file ends with `Thank you for using QUAST!`
 
-Quast creates a subfolder with many different files. Take a look around in it. Then, look at the file called
+### Next steps
 
-`less quast_results/latest/report.txt`
+In the next lab, we will interpret the results.
 
-````diff
-! How many contigs longer than 50000 bp does your assembly consist of?
-! What is the N50 length?
-! How many misassemblies are there?
-````
+## Other things to try
 
-There is also a PDF file which you can download to your computer to look at.
+### Run BUSCO with a different species-specific gene set
 
-I have uploaded the canu and flye quast reports to the github folder so you can compare the assembly programs.
+Take a look at the available BUSCO gene sets for different species again with `busco --list-datasets`.
+You could try a different one in addition to `insecta_odb10`, for instance for arthropods or eukaryotes.
 
-````diff
-! What are the main differences between flye and canu? (N50, misassemblies, longest contig…)
-! Which assembly is more contiguous?
-````
+### Canu: QC assembly without bubble sequences
 
-Navigate to where the reference assembly is located https://www.ebi.ac.uk/ena/browser/view/GCA_905333015
+If you check the file `canu_assembly.report` it will have a number of contigs listed at the end. However, if you count how many contigs there are in `canu_assembly.contigs.fasta` you will see it is the higher. The fasta file has all contigs, *as well as* so-called Bubble sequences.
+Bubble sequences are the result of heterozygosit, sequence differences between the two chromosomes of the sampled individual. They do not make up a large fraction of the assembly, but still contribute a significant fraction.
 
-<img width="1263" alt="Screenshot 2021-05-01 at 13 47 44" src="https://user-images.githubusercontent.com/46928237/116781542-d1aac700-aa83-11eb-8b60-a55f5abf23a0.png">
+To find out which seqeunces in `canu_assembly.contigs.fasta` are bubbles, look inside the file: the sequence header (the line starting with `>`) has either `suggestBubble=yes` or `suggestBubble=no`.
 
-Click on the “Assembly Statistics” on the right hand side.
+You can read more about bubbles in the publication for canu: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5411767/ (search for 'assembly bubble').
 
-````diff
-! How does the reference genome assembly compare to your assembly in terms of contiguity?
-````
+One interesting question would be what the assembly QC results are for the contigs `excluding` the bubbles. For example, do we still have the same results for BUSCO, or is one of the conserved genes in one of the bubble sequences? Since bubbles are similar to another region in the same assembly, will Quast report a lower `Duplication ratio`?
 
-You can also download the sequence report (click “Sequence Report” on the right hand side.
-
-````diff
-! How many chromosomes does the assembly contain?
-````
+Use your Python and Biopython knowledge to write a Python program that filters the contigs in `canu_assembly.contigs.fasta` and creates a file with contigs that are not indicated as bubbles. Run BUSCO and Quast on this file and compare the results with the analysis of `canu_assembly.contigs.fasta`
