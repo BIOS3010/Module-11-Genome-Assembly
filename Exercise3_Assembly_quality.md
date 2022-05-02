@@ -28,8 +28,12 @@ Second, as the BUSCO analysis will take some time (an hour or so), we run it aga
 To get started with BUSCO, we need to run the following commands:
 
 ```
+module --force purge
 module load BUSCO/5.0.0-foss-2020a
 ```
+
+The first command makes sure we start with a 'blank' environment,
+the second one loads BUSCO.
 
 To have a look at the available BUSCO gene sets for different species use:
 
@@ -102,11 +106,12 @@ We can use Quast (http://quast.sourceforge.net) to find many different metrics o
 To get started with Quast, we need to run the following commands:
 
 ```
+module --force purge
 module load QUAST/5.0.2-foss-2020a-Python-3.8.2
 ```
 
 Work in your `assembly_qc` folder and use `screen` as before -
-the aalysis will take an hour or so.
+the analysis will take an hour or so.
 
 To run Quast on the canu assembly use:
 
