@@ -91,9 +91,9 @@ Once BUSCO is running, proceed to start Quast as described below.
 
 After doing a genome assembly, one of the questions is often about how correct and contiguous the assembly is. The term *contiguous* refers to how well the different sequences have been put together. An assembly is more contiguous the fewer contigs it has.
 
-It is not straight-forward to evaluate correctness for many projects. However, for *Bombus campestris* we have a reference to compare to downloaded from https://www.ebi.ac.uk/ena/browser/view/GCA_905333015, located in the shared folder here:
+It is not straight-forward to evaluate correctness for many projects. However, for *Bombus campestris* we have a reference to compare to downloaded from https://www.ebi.ac.uk/ena/browser/view/GCA_905333015 (from the link called "All Seq FASTA"), located in the shared folder here:
 
-`less /storage/BIOS3010/Genome_assembly/CAJOSK02.fasta`
+`less /storage/BIOS3010/Genome_assembly/GCA_905333015.2.fasta`
 
 This genome was generated using the following pipeline (from https://www.ebi.ac.uk/ena/browser/view/GCA_905333015):
 
@@ -118,7 +118,7 @@ To run Quast on the canu assembly use:
 ```
 quast \
 /home/username/canu_assembly/canu_assembly.contigs.fasta \
--r /storage/BIOS3010/Genome_assembly/CAJOSK02.fasta  \
+-r /storage/BIOS3010/Genome_assembly/GCA_905333015.2.fasta \
 -o canu_quast \
 -t 2 \
 1> canu_quast.out 2> canu_quast.err
