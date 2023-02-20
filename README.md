@@ -1,6 +1,6 @@
 # Module-11-Genome-Assembly
 
-The purpose of this exercise is to make and evaluate *de novo* assemblies. We will use pacbio HiFi reads from the field cuckoo bee (*Bombus campestris*) from the Darwin tree of life project https://www.darwintreeoflife.org/2021/03/10/bee-genome-release/.
+The purpose of this exercise is to assemble the genome of a SARS-CoV-2 virus. We will compare two different approaches to genome assembly, reference-based and *de novo* assembly. We will use PacBio HiFi reads generated with the [HiFiViral SARS-CoV-2 kit](https://www.pacb.com/research-focus/microbiology/public-health/covid-19-sequencing-tools-and-resources/).
 
 ![field-cuckoo](https://user-images.githubusercontent.com/46928237/116210234-f67d0280-a742-11eb-88fe-5fe9cae1ed22.jpg)
 
