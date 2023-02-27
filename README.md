@@ -14,7 +14,10 @@ Mixed_2: AY.20 + BA.5.2.1. 1:2 reads
 | SRR19910221  | AY.20            | AY.20                                               |                        |                       |
 | SRR22291955  | BA.5.2.1         | BA.5.2.1                                            |                        |                       |
 | Mixed_1      | AY.20 + BA.5.2.1 | B.1.617.2 (i.e. base Delta. Not identical to AY.20) | 1 scaffold full length | Ratio 1:1             |
-| Mixed_2      | AY.20 + BA.5.2.1 | BA.5.2.1                                            | 1 scaffold full length | Ratio 1:2 (most BA.5) |
+| Mixed_2      | AY.20 + BA.5.2.1 | BA.5.2.1                                            | 1 scaffold full length | Ratio 1:2 (most BA.5) |  
+
+Comment:
+de novo assembly of Mixed_1 and Mixed_2 both resulted in a single scaffold, almost full length. The two scaffolds were almost identical from Mixed_1 and Mixed_2. Pairwise blast identities of 29730/29824(99%). However, Nextclade on these sequences failed, not enough matches. Similarly, blastn search gave no hits. I don't understand what's going on...
 
 -------
 The purpose of this exercise is to assemble the genome of a SARS-CoV-2 virus. We will compare two different approaches to genome assembly, reference-based and *de novo* assembly. We will use PacBio HiFi reads generated with the [HiFiViral SARS-CoV-2 kit](https://www.pacb.com/research-focus/microbiology/public-health/covid-19-sequencing-tools-and-resources/).
