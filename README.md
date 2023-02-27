@@ -18,7 +18,7 @@ Mixed_2: AY.20 + BA.5.2.1. 1:2 reads
 
 Comment:  
 It's quite interesting to compare the results of the reference-based and de novo. For example, are they identical? Which is the longest? Which has the most number of N's? The Nextclade server is a good starting point. 
-NB: I don't think that the BA.5.2.1 reads are used correctly in Spades. Do they have different format or something? Why does it not have any matches in Nextclade or Blast?
+NB: I don't think that the BA.5.2.1 reads are used correctly in Spades. Do they have different format or something? Why does it not have any matches in Nextclade or Blast? It's strange because the mapping seems alright. There are not only duplicated reads or something like that. The whole genome is covered. And the fastqc results are also looking ok. 
 
 Mixed:  
 de novo assembly of Mixed_1 and Mixed_2 both resulted in a single scaffold, almost full length. The two scaffolds were almost identical from Mixed_1 and Mixed_2. Pairwise blast identities of 29730/29824(99%). However, Nextclade on these sequences failed, not enough matches. Similarly, blastn search gave no hits. I don't understand what's going on...
