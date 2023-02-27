@@ -10,9 +10,9 @@ Mixed_2: AY.20 + BA.5.2.1. 1:2 reads
 
 | Sample       | Pangolin         | Reference based (Nextclade)                         | de novo (Nextclade)    |               Comment |
 | ------------ | ---------------- | --------------------------------------------------- | ---------------------- | --------------------- |
-| SRR19868708  | AY.44            | AY.44                                               |                        |                       |
-| SRR19910221  | AY.20            | AY.20                                               |                        |                       |
-| SRR22291955  | BA.5.2.1         | BA.5.2.1                                            |                        |                       |
+| SRR19868708  | AY.44            | AY.44                                               | AY.44                  |                       |
+| SRR19910221  | AY.20            | AY.20                                               | AY.20                  |                       |
+| SRR22291955  | BA.5.2.1         | BA.5.2.1                                            | 1 scaffold full length |                       |
 | Mixed_1      | AY.20 + BA.5.2.1 | B.1.617.2 (i.e. base Delta. Not identical to AY.20) | 1 scaffold full length | Ratio 1:1             |
 | Mixed_2      | AY.20 + BA.5.2.1 | BA.5.2.1                                            | 1 scaffold full length | Ratio 1:2 (most BA.5) |  
 
