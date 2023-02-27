@@ -8,13 +8,13 @@ SRR22291955: BA.5.2.1
 Mixed_1: AY.20 + BA.5.2.1. 1:1 reads  
 Mixed_2: AY.20 + BA.5.2.1. 1:2 reads
 
-| Sample       | Pangolin         | Nextclade                                           |               Comment |
-| ------------ | ---------------- | --------------------------------------------------- | --------------------- |
-| SRR19868708  | AY.44            | AY.44                                               |                       |
-| SRR19910221  | AY.20            | AY.20                                               |                       |
-| SRR22291955  | BA.5.2.1         | BA.5.2.1                                            |                       |
-| Mixed_1      | AY.20 + BA.5.2.1 | B.1.617.2 (i.e. base Delta. Not identical to AY.20) | Ratio 1:1             |
-| Mixed_2      | AY.20 + BA.5.2.1 | BA.5.2.1                                            | Ratio 1:2 (most BA.5) |
+| Sample       | Pangolin         | Reference based (Nextclade)                         | de novo (Nextclade) |               Comment |
+| ------------ | ---------------- | --------------------------------------------------- | ------------------- | --------------------- |
+| SRR19868708  | AY.44            | AY.44                                               |                     |                       |
+| SRR19910221  | AY.20            | AY.20                                               |                     |                       |
+| SRR22291955  | BA.5.2.1         | BA.5.2.1                                            |                     |                       |
+| Mixed_1      | AY.20 + BA.5.2.1 | B.1.617.2 (i.e. base Delta. Not identical to AY.20) |                     | Ratio 1:1             |
+| Mixed_2      | AY.20 + BA.5.2.1 | BA.5.2.1                                            |                     | Ratio 1:2 (most BA.5) |
 
 -------
 The purpose of this exercise is to assemble the genome of a SARS-CoV-2 virus. We will compare two different approaches to genome assembly, reference-based and *de novo* assembly. We will use PacBio HiFi reads generated with the [HiFiViral SARS-CoV-2 kit](https://www.pacb.com/research-focus/microbiology/public-health/covid-19-sequencing-tools-and-resources/).
