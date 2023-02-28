@@ -13,6 +13,7 @@ Tanker:
 6. Mappe en mixed sample - spørre studentene om de har noe forslag til hva som kan ha skjedd med denne prøven? Ha en mixed som er i 1:2-forhold.
 
 Update 28. feb: Mixed_1 er nå AY.44 og AY.20 blandet. AY.20 har flest reads.
+Kanskje de kan prøve å se på mappingen i IGV å finne ut hvilke to prøver som er blitt blandet?
 
 SRR19868708: AY.44  
 SRR19910221: AY.20  
