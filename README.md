@@ -2,8 +2,6 @@
 -------
 Notes:
 
-TODO: Prøve Spades med mix av AY.44 og AY.20.
-
 Tanker:
 1. Lage mappinger.
 2. Lage mpileup - se på fila??
@@ -19,23 +17,18 @@ SRR19868708: AY.44
 SRR19910221: AY.20  
 SRR22291955: BA.5.2.1  
 
-Mixed_1: AY.20 + BA.5.2.1. 1:1 reads  
-Mixed_2: AY.20 + BA.5.2.1. 1:2 reads
+
 
 | Sample       | Pangolin         | Reference based (Nextclade)                         | de novo (Nextclade)    |               Comment |
 | ------------ | ---------------- | --------------------------------------------------- | ---------------------- | --------------------- |
 | SRR19868708  | AY.44            | AY.44                                               | AY.44                  |                       |
 | SRR19910221  | AY.20            | AY.20                                               | AY.20                  |                       |
 | SRR22291955  | BA.5.2.1         | BA.5.2.1                                            | 1 scaffold full length |                       |
-| Mixed_1      | AY.20 + BA.5.2.1 | B.1.617.2 (i.e. base Delta. Not identical to AY.20) | 1 scaffold full length | Ratio 1:1             |
-| Mixed_2      | AY.20 + BA.5.2.1 | BA.5.2.1                                            | 1 scaffold full length | Ratio 1:2 (most BA.5) |  
 
 Comment:  
 It's quite interesting to compare the results of the reference-based and de novo. For example, are they identical? Which is the longest? Which has the most number of N's? The Nextclade server is a good starting point. 
-NB: I don't think that the BA.5.2.1 reads are used correctly in Spades. Do they have different format or something? Why does it not have any matches in Nextclade or Blast? It's strange because the mapping seems alright. There are not only duplicated reads or something like that. The whole genome is covered. And the fastqc results are also looking ok. 
 
-Mixed:  
-de novo assembly of Mixed_1 and Mixed_2 both resulted in a single scaffold, almost full length. The two scaffolds were almost identical from Mixed_1 and Mixed_2. Pairwise blast identities of 29730/29824(99%). However, Nextclade on these sequences failed, not enough matches. Similarly, blastn search gave no hits. I don't understand what's going on...
+NB: I don't think that the BA.5.2.1 reads are used correctly in Spades. Do they have different format or something? Why does it not have any matches in Nextclade or Blast? It's strange because the mapping seems alright. There are not only duplicated reads or something like that. The whole genome is covered. And the fastqc results are also looking ok. 
 
 -------
 The purpose of this exercise is to assemble the genome of a SARS-CoV-2 virus. We will compare two different approaches to genome assembly, reference-based and *de novo* assembly. We will use PacBio HiFi reads generated with the [HiFiViral SARS-CoV-2 kit](https://www.pacb.com/research-focus/microbiology/public-health/covid-19-sequencing-tools-and-resources/).
