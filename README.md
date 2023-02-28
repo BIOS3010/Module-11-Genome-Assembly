@@ -28,7 +28,7 @@ SRR22291955: BA.5.2.1
 Comment:  
 It's quite interesting to compare the results of the reference-based and de novo. For example, are they identical? Which is the longest? Which has the most number of N's? The Nextclade server is a good starting point. 
 
-NB: I don't think that the BA.5.2.1 reads are used correctly in Spades. Do they have different format or something? Why does it not have any matches in Nextclade or Blast? It's strange because the mapping seems alright. There are not only duplicated reads or something like that. The whole genome is covered. And the fastqc results are also looking ok. 
+NB: I don't think that the BA.5.2.1 reads are used correctly in Spades. Do they have different format or something? Why does it not have any matches in Nextclade or Blast? It's strange because the mapping seems alright. There are not only duplicated reads or something like that. The whole genome is covered. And the fastqc results are also looking ok. IT'S PROBABLY JUST THE WRONG ORIENTATINO OF THE SEQUENCE.
 
 -------
 The purpose of this exercise is to assemble the genome of a SARS-CoV-2 virus. We will compare two different approaches to genome assembly, reference-based and *de novo* assembly. We will use PacBio HiFi reads generated with the [HiFiViral SARS-CoV-2 kit](https://www.pacb.com/research-focus/microbiology/public-health/covid-19-sequencing-tools-and-resources/).
