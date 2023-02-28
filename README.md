@@ -1,6 +1,17 @@
 # Module-11-Genome-Assembly
 -------
 Notes:
+
+TODO: Prøve Spades med mix av AY.44 og AY.20.
+
+Tanker:
+1. Lage mappinger.
+2. Lage mpileup - se på fila??
+3. Se på mappingen i IGV
+4. Bruke ulik setting for å kalle N (option i Ivar). Se på dette i IGV at det stemmer med coverage. 
+5. Lage de novo - sammenligne med referansebasert - lengde? N's? etc.
+6. Mappe en mixed sample - spørre studentene om de har noe forslag til hva som kan ha skjedd med denne prøven? Ha en mixed som er i 1:2-forhold.
+
 SRR19868708: AY.44  
 SRR19910221: AY.20  
 SRR22291955: BA.5.2.1  
