@@ -1,5 +1,32 @@
 # Module-11-Genome-Assembly
+-------
+Notes:
 
+Tanker:
+1. Lage mappinger.
+2. Lage mpileup - se på fila??
+3. Se på mappingen i IGV
+4. Bruke ulik setting for å kalle N (option i Ivar). Se på dette i IGV at det stemmer med coverage. 
+5. Lage de novo - sammenligne med referansebasert - lengde? N's? etc. NB: ved de novo kan orienteringen av sekvensen bli ulik. 
+6. Mappe en mixed sample - spørre studentene om de har noe forslag til hva som kan ha skjedd med denne prøven? Ha en mixed som er i 1:2-forhold.
+
+Update 28. feb: mystery.fastq.gz er AY.44 og AY.20 blandet. AY.20 har flest reads.
+Kanskje de kan prøve å se på mappingen i IGV å finne ut hvilke to prøver som er blitt blandet?
+
+
+
+| Sample       | Pangolin         | Reference based (Nextclade)                         | de novo (Nextclade)    |               Comment |
+| ------------ | ---------------- | --------------------------------------------------- | ---------------------- | --------------------- |
+| SRR19868708  | AY.44            | AY.44                                               | AY.44                  |                       |
+| SRR19910221  | AY.20            | AY.20                                               | AY.20                  |                       |
+| SRR22291955  | BA.5.2.1         | BA.5.2.1                                            | 1 scaffold full length |                       |
+
+Comment:  
+It's quite interesting to compare the results of the reference-based and de novo. For example, are they identical? Which is the longest? Which has the most number of N's? The Nextclade server is a good starting point. 
+
+NB: I don't think that the BA.5.2.1 reads are used correctly in Spades. Do they have different format or something? Why does it not have any matches in Nextclade or Blast? It's strange because the mapping seems alright. There are not only duplicated reads or something like that. The whole genome is covered. And the fastqc results are also looking ok. IT'S PROBABLY JUST THE WRONG ORIENTATINO OF THE SEQUENCE.
+
+-------
 The purpose of this exercise is to assemble the genome of a SARS-CoV-2 virus. We will compare two different approaches to genome assembly, reference-based and *de novo* assembly. We will use PacBio HiFi reads generated with the [HiFiViral SARS-CoV-2 kit](https://www.pacb.com/research-focus/microbiology/public-health/covid-19-sequencing-tools-and-resources/).
 
 ![field-cuckoo](https://user-images.githubusercontent.com/46928237/116210234-f67d0280-a742-11eb-88fe-5fe9cae1ed22.jpg)
