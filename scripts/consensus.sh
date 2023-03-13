@@ -13,5 +13,5 @@ mkdir -p results/consensus
 # Activate the samtools software
 module load SAMtools/1.15.1-GCC-11.3.0
 
-samtools mpileup -d 10000 -f data/NC_045512.fa $1 -B | /cluster/home/jonbra/.conda/envs/ivar_env/bin/ivar consensus -t 0 -m $3 -n N -p results/consensus/$2 
+samtools mpileup -B -d 10000 -f data/NC_045512.fa $1 | /cluster/home/jonbra/.conda/envs/ivar_env/bin/ivar consensus -t 0 -m $3 -n N -p results/consensus/$2 
 
