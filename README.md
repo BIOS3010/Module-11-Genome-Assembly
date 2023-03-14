@@ -1,4 +1,13 @@
 # Module-11-Genome-Assembly
+
+Plan so far:
+1. Download PacBio HiFi data from SARS-CoV-2 from the SRA database.  
+2. Use FastQC to inspect the read files.  
+3. Assemble SARS-CoV-2 genomes using two approaches:  
+   a) Reference-based  
+   b) de novo  
+
+
 -------
 Notes:
 
