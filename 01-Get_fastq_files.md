@@ -9,6 +9,8 @@ Go to the NCBI SRA SARS-CoV-2 database (see Module 10) and find PacBio HiFi sequ
 ! Are there any sequencing adapters in the reads that needs to be removed?  
 ````  
 
+If the reads are of good quality, and there are no sequence adapters to be removed, we can go on to assemble the SARS-CoV-2 genome from this sample. We will use two methods, reference-based assembly and _de novo_ assembly.
+
 
 
 Plan so far:
