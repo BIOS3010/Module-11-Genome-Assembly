@@ -11,6 +11,8 @@ Go to the NCBI SRA SARS-CoV-2 database (see Module 10) and find PacBio HiFi sequ
 
 If the reads are of good quality, and there are no sequence adapters to be removed, we can go on to assemble the SARS-CoV-2 genome from this sample. We will use two methods, reference-based assembly and _de novo_ assembly.
 
+LAGE EN DEL OPPGAVER SOM GÅR PÅ Å FORSTÅ BAM-FILA. HVOR MAPPER ET READ... START/STOP...
+
 
 
 Plan so far:
