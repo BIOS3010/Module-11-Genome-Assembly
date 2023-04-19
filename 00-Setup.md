@@ -16,4 +16,11 @@ Follow these steps to get set up.
    conda activate MINIMAP2
    conda install -c bioconda minimap2
    ```
+3. _NB: This is only necessay if you work locally_: To work with sam/bam files we need a set of tools called `Samtools`. To install Samtools do the following:
+
+   ```
+   conda env create --name SAMTOOLS # Click yes when prompted
+   conda activate SAMTOOLS
+   conda install -c bioconda samtools
+   ```
   
