@@ -23,4 +23,12 @@ Follow these steps to get set up.
    conda activate SAMTOOLS
    conda install -c bioconda samtools
    ```
+
+4. To generate a consensus sequence we will use a program called `iVar`. We will install this software using `conda`. Use option a) on the server and option b) locally:
+
+   a)
+   ```
+   module load Miniconda3/4.9.2
+   conda env create --file=data/conda-ivar.yml   
+   ```
   
