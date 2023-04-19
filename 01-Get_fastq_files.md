@@ -6,6 +6,7 @@ Go to the NCBI SRA SARS-CoV-2 database (see Module 10) and find PacBio HiFi sequ
 ```diff
 ! How is the quality of these sequencese compared to the Illumina sequences from Module 10?
 ! Why is the quality of PacBio HiFi reads so high?
+! How long is the shortest and longest read? How long are the majority of the reads? How is this length compared to the Illumina reads you looked at?
 ! Are there any sequencing adapters in the reads that needs to be removed?  
 ````  
 
