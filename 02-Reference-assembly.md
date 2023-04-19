@@ -10,8 +10,14 @@ mkdir -p results/mapping
 ./minimap2/minimap2 -ax map-pb data/NC_045512.fa FASTQ-FILE > results/mapping/mapping.sam
 ```
 
+The `sam` file is normal text with tab-separated columns. Inspect the file using `less` (`less results/mapping/mapping.sam`) and answer the following questions:
+```
+! How many lines does the sam header cover?
+! What is the name of the first mapped read?
+! At what position on the reference did the read map?
+```
 
-LAGE EN DEL OPPGAVER SOM GÅR PÅ Å FORSTÅ BAM-FILA. HVOR MAPPER ET READ... START/STOP...
+
 FÅ DEM TIL Å REGNE UT AVERAGE SEQUENCING DEPTH.
 FÅ DEM TIL Å REGNE UT COVERAGE AV CONSENSUS - ALTSÅ SE BORT I FRA N'S OG DELE PÅ REFERANSE-LENGDEN.
 
