@@ -13,7 +13,13 @@ Go to the NCBI SRA SARS-CoV-2 database (see Module 10) and find PacBio HiFi sequ
 
 If the reads are of good quality, and there are no sequence adapters to be removed, we can go on to assemble the SARS-CoV-2 genome from this sample. We will use two methods, reference-based assembly and _de novo_ assembly.
 
-# Reference-based genome assembly
+# Reference-based genome assembly  
+The NCBI accession [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2/) is the official reference genome for SARS-CoV-2, the so-called Wuhan-Hu-1.  
+
+**Create a copy of this genome sequence in fasta format and store it on your computer or server. Store it in a file called `NC_045512.fa`.**  
+
+We first need to map the HiFi reads to the genome. 
+
 
 LAGE EN DEL OPPGAVER SOM GÅR PÅ Å FORSTÅ BAM-FILA. HVOR MAPPER ET READ... START/STOP...
 FÅ DEM TIL Å REGNE UT AVERAGE SEQUENCING DEPTH.
