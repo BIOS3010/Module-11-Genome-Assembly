@@ -1,6 +1,8 @@
 # Reference-based genome assembly  
 The NCBI accession [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2/) is the official reference genome for SARS-CoV-2, the so-called Wuhan-Hu-1. In the folder called `data` you will find a copy of this sequence in `fasta` format as well as a gene annotation in `gff` format.  
 
+## Map reads to the genome
+
 We first need to map the HiFi reads to the genome using Minimap2. Follow these commands (replace the fastq-file with the one you downloaded). You need to be directly inside the `Module-11-Genome-Assembly` folder:
 ```
 # create results folder
@@ -19,6 +21,10 @@ The `sam` file is normal text with tab-separated columns. Inspect the file using
 
 
 FÅ DEM TIL Å REGNE UT AVERAGE SEQUENCING DEPTH.
+
+## Create a consensus sequence
+
+First need to sort the sam file. Then we create a so-called `pileup`, which is converts the sam-file to a list of what nucleotides are at each position in the reference, before we use a program called `iVar` to generate the consensus sequence from the pileup.
 FÅ DEM TIL Å REGNE UT COVERAGE AV CONSENSUS - ALTSÅ SE BORT I FRA N'S OG DELE PÅ REFERANSE-LENGDEN.
 
 # de novo genome assembly
