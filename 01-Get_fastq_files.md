@@ -1,4 +1,5 @@
 
+# Download PacBio HiFi reads
 In these exercises we will download and inspect fastq-files from genome sequencing projects of SARS-CoV-2, just like we did in Module 10. However, this time we will use PacBio Hifi reads generated with the [HiFiViral SARS-CoV-2 kit](https://www.pacb.com/research-focus/microbiology/public-health/covid-19-sequencing-tools-and-resources/).  
 
 Go to the NCBI SRA SARS-CoV-2 database (see Module 10) and find PacBio HiFi sequencing experiments by ticking the boxes on the left. Click on one SRA sample (if you have trouble click [here](https://www.ncbi.nlm.nih.gov/sra/SRX15953134[accn])). Download the fastq file to the server using whatever method you want (I suggest going through ENA like in Module 10), Run FastQC ([see Module 10](https://github.com/BIOS3010/Module-10-HTS/blob/main/00-Get_started.md#installing-and-using-software-on-a-linux-system)) and answer the following questions:
@@ -12,9 +13,14 @@ Go to the NCBI SRA SARS-CoV-2 database (see Module 10) and find PacBio HiFi sequ
 
 If the reads are of good quality, and there are no sequence adapters to be removed, we can go on to assemble the SARS-CoV-2 genome from this sample. We will use two methods, reference-based assembly and _de novo_ assembly.
 
+# Reference-based genome assembly
+
 LAGE EN DEL OPPGAVER SOM GÅR PÅ Å FORSTÅ BAM-FILA. HVOR MAPPER ET READ... START/STOP...
 FÅ DEM TIL Å REGNE UT AVERAGE SEQUENCING DEPTH.
 FÅ DEM TIL Å REGNE UT COVERAGE AV CONSENSUS - ALTSÅ SE BORT I FRA N'S OG DELE PÅ REFERANSE-LENGDEN.
+
+# de novo genome assembly
+
 
 
 
