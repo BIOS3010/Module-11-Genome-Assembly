@@ -9,6 +9,7 @@ We first need to map the HiFi reads to the genome using Minimap2. Follow these c
 mkdir -p results/mapping
 
 # Map PacBio HiFi/CCS reads
+conda activate MINIMAP2
 minimap2 -ax map-pb data/NC_045512.fa FASTQ-FILE > results/mapping/mapping.sam
 ```
 
