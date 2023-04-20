@@ -20,6 +20,13 @@ The `sam` file is normal text with tab-separated columns. Inspect the file using
 ! At what position on the reference did the read map?
 ```
 
+Sort and index:
+```
+module load # Only do this on the server
+
+
+```
+
 
 FÅ DEM TIL Å REGNE UT AVERAGE SEQUENCING DEPTH.
 
