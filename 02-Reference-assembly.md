@@ -9,7 +9,7 @@ We first need to map the HiFi reads to the genome using Minimap2. Follow these c
 mkdir -p results/mapping
 
 # Map PacBio HiFi/CCS reads
-./minimap2/minimap2 -ax map-pb data/NC_045512.fa FASTQ-FILE > results/mapping/mapping.sam
+minimap2 -ax map-pb data/NC_045512.fa FASTQ-FILE > results/mapping/mapping.sam
 ```
 
 The `sam` file is normal text with tab-separated columns. Inspect the file using `less` (`less results/mapping/mapping.sam`) and answer the following questions:
