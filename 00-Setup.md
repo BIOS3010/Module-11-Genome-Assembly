@@ -29,6 +29,6 @@ Follow these steps to get set up.
 
    ```
    module load Miniconda3/4.9.2 # Only do this if you use the server
-   conda create --file=data/conda-ivar.yml   
+   conda env create --file data/conda-ivar.yml   
    ```
   
