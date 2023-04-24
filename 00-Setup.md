@@ -31,4 +31,11 @@ Follow these steps to get set up.
    module load Miniconda3/4.9.2 # Only do this if you use the server
    conda env create --file data/conda-ivar.yml   
    ```
+
+6. For _de novo_ assembly we need to download `SPAdes`. We will do this also on the server to get the latest version.
+
+   ```
+   wget http://cab.spbu.ru/files/release3.15.5/SPAdes-3.15.5-Linux.tar.gz
+   tar -xzf SPAdes-3.15.5-Linux.tar.gz
+   ```
   
