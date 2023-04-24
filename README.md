@@ -10,8 +10,3 @@
 ## Reference-based assembly
 
 * Go to [these exercises](02-Reference-assembly.md), and follow the steps.
-
-## de novo assembly
-
-* Go to [these exercises](03-de_novo_assembly.md), and follow the steps.
-
