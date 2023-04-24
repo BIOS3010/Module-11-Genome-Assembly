@@ -95,4 +95,6 @@ cat mapping.fa | grep -v "^>" | tr -d "N" | wc -c
 !How much of the reference genome is covered?
 ```
 
+Bonus exercise: 
+Try to change the coverage cutoff for calling a nucleotide in iVar (`-m` option) and see the effects on the consensus sequence. Compare the changes to the mapping file in IGV and see oif it makes sense.
 
