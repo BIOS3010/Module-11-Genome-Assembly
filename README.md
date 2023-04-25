@@ -12,3 +12,7 @@ The purpose of this exercise is to assemble the genome of a SARS-CoV-2 virus. We
 ## Reference-based assembly
 
 * Go to [these exercises](02-Reference-assembly.md), and follow the steps.
+
+## _de novo_ assembly
+
+* Go to [these exercises](03-de-novo-assembly.md), and follow the steps.
