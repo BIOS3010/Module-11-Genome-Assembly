@@ -24,4 +24,5 @@ Next we will compare the _de novo_ assembled genome sequence with the reference-
 ```diff
 ! Are there any differences between the two assemblies?
 ! Look at the start and stop positions of the alignment on the two sequences (Query and Subject). Do they start at the exact same positions?
+! If you compare the de novo assembled genome with the mapping file you see in IGV, at roughly what coverage level did SPAdes assemble a sequence?
 ```
