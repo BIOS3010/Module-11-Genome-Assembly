@@ -19,7 +19,7 @@ The assembly runs very fast and produces a lot of info and files in the `results
 ! How does this compare to the length of the reference-based assembly (not counting the N's)?
 ```
 
-Next we will compare the _de novo_ assembled genome sequence with the reference-based assembly. We will align the two sequences using the pairwise Blast function on the NCBI web pages. Go to the [NCBI Blast pages](https://blast.ncbi.nlm.nih.gov/Blast.cgi), click on "Nucleotide BLAST". If you tick the box called "Align two or more sequences" you get a second window to paste a sequence. Paste the two sequences into the two boxes and click `BLAST` (a simple way to copy the sequences is to run `cat` and then the file. This will print the entire sequence to screen and you can select and copy it). In the "Alignments" tab you can inspect the alignment. 
+Next we will compare the _de novo_ assembled genome sequence with the reference-based assembly. We will align the two sequences using the pairwise Blast function on the NCBI web pages. Go to the [NCBI Blast pages](https://blast.ncbi.nlm.nih.gov/Blast.cgi), click on "Nucleotide BLAST". If you tick the box called "Align two or more sequences" you get a second window to paste a sequence. Paste the two sequences into the two boxes and click `BLAST` (a simple way to copy the sequences is to run `cat` and then the file. This will print the entire sequence to screen and you can select and copy it). In the "Alignments" tab you can inspect the alignment in simple text, or you can click on the "MSA viewer" link to view the entire alignment.   
 
 ```diff
 ! Are there any differences between the two assemblies?
