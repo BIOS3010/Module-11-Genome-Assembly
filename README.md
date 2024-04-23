@@ -1,3 +1,7 @@
+Jeg tenker oppgave 01 og 02 uke 1 (gjennomgang torsdag).
+Oppgave 03 og 04 uke 2 (gjennomgang torsdag).
+Men de som er raske kan bare fortsette med 03 og 04 første uka. 
+
 # Module-11-Genome-Assembly
 
 The purpose of this exercise is to assemble the genome of a SARS-CoV-2 virus. We will compare two different approaches to genome assembly, reference-based and _de novo_ assembly. We will use PacBio HiFi reads (circular consensus - CCS) generated with the [HiFiViral SARS-CoV-2 kit](https://www.pacb.com/research-focus/microbiology/public-health/covid-19-sequencing-tools-and-resources/). HiFi reads provide base-level resolution with >99.9% single-molecule read accuracy.
