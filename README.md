@@ -1,3 +1,6 @@
+- [ ] Be de undersøke contigs.fasta og scaffolds.fasta og telle om det er noen (hvor mange) N's. Hvorfor er det flere i scaffolds? Hvilke av filene har flest fasta-sekvenser? Hvorfor?
+- [ ] Be de undersøke og se på bam-filen. Hvor er det høyest og lavest dekning? Er det noen områder uten dekning? Hva har skjedd med konsensus-sekvensen her?
+
 Jeg tenker oppgave 01 og 02 uke 1 (gjennomgang torsdag).
 Oppgave 03 og 04 uke 2 (gjennomgang torsdag).
 Men de som er raske kan bare fortsette med 03 og 04 første uka. 
