@@ -1,9 +1,29 @@
+# Assembly quality assessment
+
+Doing _de novo_ assembly on Illumina sequenced SARS-CoV-2 genomes is often very "easy", meaning that we have such high coverage that we almost always get only a single contig representing the entire genome. This is of course a good thing, but it does not provide much opportunity for learning about the complexities of the assembly process. Therefore we will attempt to assemble the genome of the [Mpox virus](https://en.wikipedia.org/wiki/Mpox). Mpox belongs to the family _Poxviridae_ together with other viruses such as variola virus which causes smallpox (kopper). Poxviruses have large double-stranded DNA genomes of several hundred kb. The Mpox genome consists of almost 200.000 kb and 181 protein coding genes. We will _de novo_ assemble Illumina sequences from an Mpox genome sequencing project.  
+
+Run the following commands:  
+```
+# Download the fastq data
+wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/055/SRR28726555/SRR28726555_1.fastq.gz  
+wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/055/SRR28726555/SRR28726555_2.fastq.gz
+
+# Run de novo assembly with SPAdes
+module load SPAdes/3.15.2-foss-2019b
+spades.py \
+    -o de_novo/ \
+    -1 SRR28726555_1.fastq.gz -2 SRR28726555_2.fastq.gz \
+    --phred-offset 33
+```
+
+Doing de novo assembly of eukaryotic genomes however often results in many contigs and a highly fragmented assembly. 
+
 MPOX: SRR28726555
 Spades noen minutter (16 threads default. Husk å spesifisere --phred-offset 33)
 Kjøre BUSCO med virus...
 Kjøre QUAST
 
-Doing de novo assembly on Illumina sequenced viral genomes is often very "easy", meaning that we have such high coverage that we almost always get only a single contig representing the entire genome. Doing de novo assembly of eukaryotic genomes however often results in many contigs and a highly fragmented assembly. 
+
 
 The quality of an assembly can be assessed in many ways, but one of the most common ways is to use the [QUAST](http://quast.sourceforge.net/) tool. QUAST is a quality assessment tool for genome assemblies that takes as input a set of contigs and compares them to a reference genome. QUAST produces a report with many different statistics, such as the number of contigs, the N50 value, and the number of mismatches, indels, and misassemblies.
 
