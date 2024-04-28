@@ -18,3 +18,4 @@ The purpose of the exercises for week 1 of the "Genome Assembly" module is to as
 * Go to [these exercises](03-de-novo-assembly.md), and follow the steps.
 
 ## Assembly quality assessment
+ * Exercises will be available next week.
