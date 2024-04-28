@@ -84,9 +84,9 @@ The "-m" option sets the minimum coverage threshold needed to call a nucleotide.
 You should now have a file called `mapping.fa`. This is a fasta file of the consensus genome sequence created from the mapping. Inspect the file using `less` and answer the following questions:  
 
 ```diff
-!Does the beginning of the consensus look correct compared to what you see in IGV?
-!Why does the sequence begin with a series of N's?
-!Can you locate the position of the first mismatch you noted previously? What is the nucleotide in the consensus sequence? Is this what you expected when you looked at the mapping?
+! Does the beginning of the consensus look correct compared to what you see in IGV?
+! Why does the sequence begin with a series of N's?
+! Can you locate the position of the first mismatch you noted previously? What is the nucleotide in the consensus sequence? Is this what you expected when you looked at the mapping?
 ```
 
 Lastly we will calculate the "breadth" of coverage. That is, how much of the reference genome have we covered. We need to discard the N's for this calculation as these represent positions that we don't entirely trust. We use `grep` to remove the header line and `tr -d` to delete the "N" characters. Then we use `wc -c` to calculate how many letters we have in our sequence (assuming our sequence is on a single line). Then we divide that number by 29903 which is the length of the reference genome.
