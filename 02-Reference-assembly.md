@@ -44,6 +44,8 @@ In IGV you first need to select the right genome. Click on "Genome" in the top l
 Play around in IGV. For example; Zoom in on a particular region (e.g. by click and drag above the genome line on top or by the plus and minus buttons on the top right). Click on a read to see what happens. Click on the coverage track on top of the alignments to see how many nucletides are covered at each position.  
 
 ```diff
+! What is the lowest and highest coverage you see in the mapping?
+! Are there any regions where the coverage is zero?
 ! Mismathces to the reference are colored letters in the reads. Can you find a position in the genome where all or the majority of the reads have a mismatch to the reference (there should be plenty). Take  a note of the earliest position in the reference where you see such a mismatch. Note the position, the reference and the alternative nucleotide (ideally you should click on the bars indicating the coverage at that position and take a screenshot showing the information.)
 ```  
 
