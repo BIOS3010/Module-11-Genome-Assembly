@@ -96,7 +96,7 @@ cat mapping.fa | grep -v "^>" | tr -d "N" | wc -c
 ```
 
 ```diff
-!How much of the reference genome is covered?
+! How much of the reference genome is covered?
 ```
 
 Bonus exercise: 
