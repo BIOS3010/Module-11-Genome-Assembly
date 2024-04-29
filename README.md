@@ -25,3 +25,5 @@ The purpose of this exercise is to assemble the genome of a SARS-CoV-2 virus. We
 * Go to [these exercises](03-de-novo-assembly.md), and follow the steps.
 
 ## Assembly quality assessment
+
+* Go to [these exercises](04-assembly-quality.md), and follow the steps.
