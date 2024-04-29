@@ -25,11 +25,14 @@ Follow these steps to get set up.
    conda install -c bioconda samtools
    ```
 
-5. To generate a consensus sequence we will use a program called `iVar`. Install iVar with conda:
+5. To generate a consensus sequence we will use a program called `iVar`. Install iVar with conda using a pre-made environment file (yml file) that creates an environment with iVar. 
 
    ```
-   module load Miniconda3/4.9.2 # Only do this if you use the server
-   conda env create --file data/conda-ivar.yml   
+   # On the server do this:
+   module load Miniconda3/4.9.2 
+
+   # If you work locally do this:
+   conda env create --file data/conda-ivar.yml  
    ```
 
 6. For _de novo_ assembly we need to download `SPAdes`. We will do this also on the server to get the latest version.
