@@ -5,11 +5,12 @@ In these exercises we will download and inspect fastq-files from genome sequenci
 Go to the NCBI SRA SARS-CoV-2 database (see Module 10) and find PacBio HiFi sequencing experiments by ticking the boxes on the left. Click on one SRA sample (if you have trouble click [here](https://www.ncbi.nlm.nih.gov/sra/SRX15953134[accn])). Download the fastq file using the SRA Toolkit (change the SRR accession to fit your needs):
 
 ```bash
-~/sratoolkit.3.1.0-ubuntu64/bin/fastq-dump --outdir ~/Module-11-Genome-Assembly/data SRR13452896
+~/sratoolkit.3.1.0-ubuntu64/bin/fastq-dump --outdir ~/Module-11-Genome-Assembly/data SRR19910221
 ```
 
 Then run FastQC ([see Module 10](https://github.com/BIOS3010/Module-10-HTS/blob/main/00-Get_started.md#installing-and-using-software-on-a-linux-system)) and answer the following questions:
 
+NB! The forst two questions can be difficult to answer depending on what kind of Illumina fastq reads you investigated in Module 10. If your reads all had Q=30 or not. 
 ```diff
 ! How is the quality of these sequencese compared to the Illumina sequences from Module 10?
 ! Why is the quality of PacBio HiFi reads so high?
