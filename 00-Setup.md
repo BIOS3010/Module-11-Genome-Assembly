@@ -38,7 +38,7 @@ Follow these steps to get set up.
 6. For _de novo_ assembly we need to download `SPAdes`. We will do this also on the server to get the latest version.
 
    ```
-   wget http://cab.spbu.ru/files/release3.15.5/SPAdes-3.15.5-Linux.tar.gz
+   wget https://github.com/ablab/spades/releases/download/v3.15.5/SPAdes-3.15.5-Linux.tar.gz
    tar -xzf SPAdes-3.15.5-Linux.tar.gz
    ```
   
