@@ -32,8 +32,8 @@ conda activate SAMTOOLS # Only do this if you work locally
 
 # Convert sam to bam and sort. Make sure you're in the results/mapping folder
 
-samtools view -Sb mapping.sam | samtools sort - -o mapping.sorted.bam
-samtools index mapping.sorted.bam
+samtools view -Sb results/mapping/mapping.sam | samtools sort - -o results/mapping/mapping.sorted.bam
+samtools index results/mapping/mapping.sorted.bam
 ```
 Download the `.bam` and `.bai` files to your computer. You can use a wildcard like this `*.bam*` in the `scp` command you used last week.
 
