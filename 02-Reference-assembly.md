@@ -94,7 +94,7 @@ You should now have a file called `mapping.fa`. This is a fasta file of the cons
 Lastly we will calculate the "breadth" of coverage. That is, how much of the reference genome have we covered. We need to discard the N's for this calculation as these represent positions that we don't entirely trust. We use `grep` to remove the header line and `tr -d` to delete the "N" characters. Then we use `wc -c` to calculate how many letters we have in our sequence (assuming our sequence is on a single line). Then we divide that number by 29903 which is the length of the reference genome.
 
 ```
-cat results/mapping/mapping.fa | grep -v "^>" | tr -d "N" | wc -c
+cat mapping.fa | grep -v "^>" | tr -d "N" | wc -c
 ```
 
 ```diff
