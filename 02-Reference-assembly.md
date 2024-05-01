@@ -52,7 +52,7 @@ Play around in IGV. For example; Zoom in on a particular region (e.g. by click a
 The `samtools` package contains many nice programs to work with mapping files. For example, `samtools depth` will print out the coverage at each position in the genome. Use this command to calculate the average coverage:  
 
 ```
-samtools depth -a mapping.sorted.bam | awk '{sum+=$3} END { print "Average = ",sum/NR}'
+samtools depth -a results/mapping/mapping.sorted.bam | awk '{sum+=$3} END { print "Average = ",sum/NR}'
 ```
 
 ```diff
