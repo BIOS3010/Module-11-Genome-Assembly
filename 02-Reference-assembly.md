@@ -32,8 +32,8 @@ conda activate SAMTOOLS # Only do this if you work locally
 
 # Convert sam to bam and sort. Make sure you're in the results/mapping folder
 
-samtools view -Sb mapping.sam | samtools sort - -o mapping.sorted.bam
-samtools index mapping.sorted.bam
+samtools view -Sb results/mapping/mapping.sam | samtools sort - -o results/mapping/mapping.sorted.bam
+samtools index results/mapping/mapping.sorted.bam
 ```
 Download the `.bam` and `.bai` files to your computer. You can use a wildcard like this `*.bam*` in the `scp` command you used last week.
 
@@ -49,10 +49,10 @@ Play around in IGV. For example; Zoom in on a particular region (e.g. by click a
 ! Mismathces to the reference are colored letters in the reads. Can you find a position in the genome where all or the majority of the reads have a mismatch to the reference (there should be plenty). Take  a note of the earliest position in the reference where you see such a mismatch. Note the position, the reference and the alternative nucleotide (ideally you should click on the bars indicating the coverage at that position and take a screenshot showing the information.)
 ```  
 
-The `samtools` package contanins many nice programs to work with mapping files. For example, `samtools depth` will print out the coverage at each position in the genome. Use this command to calculate the average coverage:  
+The `samtools` package contains many nice programs to work with mapping files. For example, `samtools depth` will print out the coverage at each position in the genome. Use this command to calculate the average coverage:  
 
 ```
-samtools depth -a mapping.sorted.bam | awk '{sum+=$3} END { print "Average = ",sum/NR}'
+samtools depth -a results/mapping/mapping.sorted.bam | awk '{sum+=$3} END { print "Average = ",sum/NR}'
 ```
 
 ```diff
@@ -65,7 +65,7 @@ samtools depth -a mapping.sorted.bam | awk '{sum+=$3} END { print "Average = ",s
 First we will create a so-called `pileup`, which converts the sam-file to a list of what nucleotides are at each position in the reference. We will then use a program called `iVar` to generate the consensus sequence from the pileup.  
 
 ```
-samtools mpileup -B -d 10000 -f ../../data/NC_045512.fa mapping.sorted.bam > mapping.pileup
+samtools mpileup -aa -B -d 10000 -f data/NC_045512.fa results/mapping/mapping.sorted.bam > results/mapping/mapping.pileup
 ```
 
 Inspect the pileup by using the `less` command. The first column shows the name of the reference, the second column shows the position in the reference, the third column shows the reference nucleotide, the fourth column shows the coverage at that position. The fifth column contains shows the read bases. A "." means identical to the reference on the positive strand and a "," means identical to the reference on the negative strand. "^]" means that the nucleotide was at the beginning of the read. 
@@ -78,10 +78,10 @@ Now we can use the information in the pileup file to make a consensus sequence f
 
 ```
 conda activate IVAR
-cat mapping.pileup | ivar consensus -m 10 -n N -p mapping 
+cat results/mapping/mapping.pileup | ivar consensus -m 10 -n N -p mapping 
 ```
 
-The "-m" option sets the minimum coverage threshold needed to call a nucleotide. "-n" specifies which letter to insert when the coverage is below the threshold. "-p" specifies the prefix of the output files.  
+The "-m" option sets the minimum coverage depth needed to call a nucleotide. "-n" specifies which letter to insert when the coverage is below the threshold. "-p" specifies the prefix of the output files.  
 
 You should now have a file called `mapping.fa`. This is a fasta file of the consensus genome sequence created from the mapping. Inspect the file using `less` and answer the following questions:  
 
