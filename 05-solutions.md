@@ -39,7 +39,7 @@ Image: pacb.com
 The reads in this example are from 275 to 1575 bp, with the majority of reads of ca. 725 bp (see the "Basic Statistics" and "Sequence Length Distribution" parts of the FastQC report). This is much longer than the Illumina reads we looked at in Module 10. However, PacBio reads can be much longer than this. Even HiFi reads. But these reads are from PCR amplicons of roughly 675 bp.  
 
 
-![PacBio HiFi Stats](images/pacbio_hifi_stats.png)
+![PacBio HiFi Stats](images/fastqc_hifi_stats.png)
 
 
 ```diff
