@@ -65,7 +65,7 @@ samtools depth -a results/mapping/mapping.sorted.bam | awk '{sum+=$3} END { prin
 First we will create a so-called `pileup`, which converts the sam-file to a list of what nucleotides are at each position in the reference. We will then use a program called `iVar` to generate the consensus sequence from the pileup.  
 
 ```
-samtools mpileup -B -d 10000 -f ../../data/NC_045512.fa mapping.sorted.bam > mapping.pileup
+samtools mpileup -B -d 10000 -f ../../data/NC_045512.fa results/mapping/mapping.sorted.bam > results/mapping/mapping.pileup
 ```
 
 Inspect the pileup by using the `less` command. The first column shows the name of the reference, the second column shows the position in the reference, the third column shows the reference nucleotide, the fourth column shows the coverage at that position. The fifth column contains shows the read bases. A "." means identical to the reference on the positive strand and a "," means identical to the reference on the negative strand. "^]" means that the nucleotide was at the beginning of the read. 
@@ -78,7 +78,7 @@ Now we can use the information in the pileup file to make a consensus sequence f
 
 ```
 conda activate IVAR
-cat mapping.pileup | ivar consensus -m 10 -n N -p mapping 
+cat results/mapping/mapping.pileup | ivar consensus -m 10 -n N -p mapping 
 ```
 
 The "-m" option sets the minimum coverage threshold needed to call a nucleotide. "-n" specifies which letter to insert when the coverage is below the threshold. "-p" specifies the prefix of the output files.  
@@ -94,7 +94,7 @@ You should now have a file called `mapping.fa`. This is a fasta file of the cons
 Lastly we will calculate the "breadth" of coverage. That is, how much of the reference genome have we covered. We need to discard the N's for this calculation as these represent positions that we don't entirely trust. We use `grep` to remove the header line and `tr -d` to delete the "N" characters. Then we use `wc -c` to calculate how many letters we have in our sequence (assuming our sequence is on a single line). Then we divide that number by 29903 which is the length of the reference genome.
 
 ```
-cat mapping.fa | grep -v "^>" | tr -d "N" | wc -c
+cat results/mapping/mapping.fa | grep -v "^>" | tr -d "N" | wc -c
 ```
 
 ```diff
