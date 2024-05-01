@@ -81,7 +81,7 @@ conda activate IVAR
 cat results/mapping/mapping.pileup | ivar consensus -m 10 -n N -p mapping 
 ```
 
-The "-m" option sets the minimum coverage threshold needed to call a nucleotide. "-n" specifies which letter to insert when the coverage is below the threshold. "-p" specifies the prefix of the output files.  
+The "-m" option sets the minimum coverage depth needed to call a nucleotide. "-n" specifies which letter to insert when the coverage is below the threshold. "-p" specifies the prefix of the output files.  
 
 You should now have a file called `mapping.fa`. This is a fasta file of the consensus genome sequence created from the mapping. Inspect the file using `less` and answer the following questions:  
 
