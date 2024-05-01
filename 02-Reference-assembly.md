@@ -65,7 +65,7 @@ samtools depth -a results/mapping/mapping.sorted.bam | awk '{sum+=$3} END { prin
 First we will create a so-called `pileup`, which converts the sam-file to a list of what nucleotides are at each position in the reference. We will then use a program called `iVar` to generate the consensus sequence from the pileup.  
 
 ```
-samtools mpileup -B -d 10000 -f ../../data/NC_045512.fa results/mapping/mapping.sorted.bam > results/mapping/mapping.pileup
+samtools mpileup -B -d 10000 -f data/NC_045512.fa results/mapping/mapping.sorted.bam > results/mapping/mapping.pileup
 ```
 
 Inspect the pileup by using the `less` command. The first column shows the name of the reference, the second column shows the position in the reference, the third column shows the reference nucleotide, the fourth column shows the coverage at that position. The fifth column contains shows the read bases. A "." means identical to the reference on the positive strand and a "," means identical to the reference on the negative strand. "^]" means that the nucleotide was at the beginning of the read. 
