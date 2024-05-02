@@ -49,7 +49,7 @@ Play around in IGV. For example; Zoom in on a particular region (e.g. by click a
 ! Mismathces to the reference are colored letters in the reads. Can you find a position in the genome where all or the majority of the reads have a mismatch to the reference (there should be plenty). Take  a note of the earliest position in the reference where you see such a mismatch. Note the position, the reference and the alternative nucleotide (ideally you should click on the bars indicating the coverage at that position and take a screenshot showing the information.)
 ```  
 
-The `samtools` package contains many nice programs to work with mapping files. For example, `samtools depth` will print out the coverage at each position in the genome. Use this command to calculate the average coverage:  
+The `samtools` package contains many nice programs to work with mapping files. For example, `samtools depth -a` will print out the coverage at each position in the genome. Use this command to calculate the average coverage:  
 
 ```
 samtools depth -a results/mapping/mapping.sorted.bam | awk '{sum+=$3} END { print "Average = ",sum/NR}'
