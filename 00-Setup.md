@@ -11,7 +11,6 @@ Follow these steps to get set up.
 
 3. To download fastq files from the SRA server we will use the SRA Toolkit developed by the NCBI. But we need to use the latest version:
 ```bash
-cd $HOME # we install the software in the home directory
 wget --output-document sratoolkit.tar.gz https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
 tar -vxzf sratoolkit.tar.gz
 ```
@@ -37,6 +36,7 @@ tar -vxzf sratoolkit.tar.gz
    ```bash
    # On the server do this:
    module load Miniconda3/4.9.2 
+   conda env create --file data/conda-ivar.yml
 
    # If you work locally do this:
    conda env create --file data/conda-ivar.yml  
