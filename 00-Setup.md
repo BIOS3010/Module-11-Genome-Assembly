@@ -36,6 +36,7 @@ tar -vxzf sratoolkit.tar.gz
    ```bash
    # On the server do this:
    module load Miniconda3/4.9.2 
+   conda env create --file data/conda-ivar.yml
 
    # If you work locally do this:
    conda env create --file data/conda-ivar.yml  
