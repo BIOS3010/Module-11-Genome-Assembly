@@ -11,7 +11,6 @@ Follow these steps to get set up.
 
 3. To download fastq files from the SRA server we will use the SRA Toolkit developed by the NCBI. But we need to use the latest version:
 ```bash
-cd $HOME # we install the software in the home directory
 wget --output-document sratoolkit.tar.gz https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
 tar -vxzf sratoolkit.tar.gz
 ```
