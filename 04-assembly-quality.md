@@ -79,6 +79,8 @@ busco \
     -o busco
 ```
 
+Kjøre `generate_plot.py`: https://busco.ezlab.org/busco_userguide.html#interpreting-the-results
+
 HELLE:
 
 In the folder created by BUSCO (canu_busco, for example) inspect the file whose name starts with short_summary.specific.insecta_odb10.
