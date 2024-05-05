@@ -1,3 +1,5 @@
+QUAST kan bli brukt til å måle både "contiguity" og "correctness".
+
 TODO:
 Kanskje dette blir litt for likt med oppgavene i nr. 3...
 - [] Map the fastq reads to the reference genome with Bowtie2.
