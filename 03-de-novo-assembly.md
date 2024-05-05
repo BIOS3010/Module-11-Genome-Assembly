@@ -1,6 +1,6 @@
 # _de novo_ genome assembly
 
-One of the most popular _de novo_ genome assemblers is [SPAdes](https://cab.spbu.ru/software/spades/). SPAdes uses the De Bruijn Graph approach and can take both short read libraries like Illumina, long read libraries like Nanopore, or a combination. SPAdes has several modes and options that can be tweaked to best suite the types of organism or sequencing library you have. We will assemble the SARS-CoV-2 genome using the PacBio HiFi reads. This is a fairly small haploid genome and not the most difficult job. Since we also have quite few reads this does not require that much computational power and can be run on a laptop.
+One of the most popular _de novo_ genome assemblers is [SPAdes](https://cab.spbu.ru/software/spades/). SPAdes uses the De Bruijn Graph approach and can take both short read libraries like Illumina, long read libraries like Nanopore, or a combination. SPAdes has several modes and options that can be tweaked to best suite the types of organism or sequencing library you have. We will assemble the SARS-CoV-2 genome using the PacBio HiFi reads. This is a fairly small haploid genome and not the most difficult job. Since we also have quite few reads this does not require that much computational power.
 
 
 ```
@@ -12,10 +12,11 @@ mkdir -p results/de_novo
 python3.6 SPAdes-3.15.5-Linux/bin/spades.py --corona -o results/de_novo/ -s data/FASTQ_FILE
 ```
 
-The assembly runs very fast and produces a lot of info and files in the `results/de_novo` folder. Use `less` to look at the `spades.log`. Here you can see info about which k-mer sizes were used for example. The final assembly is in the `scaffolds.fasta` file. To see how many scaffolds were assembled, and info about their length, we can pull out only the fasta headers using `grep ">" scaffolds.fasta`.
+The assembly runs very fast and produces a lot of info and files in the `results/de_novo` folder. Use `less` to look at the `spades.log`. Here you can see info about which k-mer sizes were used for example. The final assembly is in the `scaffolds.fasta` file. To see how many scaffolds were assembled, and info about their length, we can pull out only the fasta headers using `grep "^>" scaffolds.fasta`.
 
 ```diff
-! How many scaffolds (fasta sequences) were assembled and how long are the sequence(s)? Hint: there's an argument to the grep command that counts.
+! How many scaffolds (fasta sequences) were assembled? Hint: there's an argument to the grep command that counts.
+! How long are the scaffolds? (Hint: see the fasta headers)  
 ! How does this compare to the length of the reference-based assembly (not counting the N's)?
 ```
 
