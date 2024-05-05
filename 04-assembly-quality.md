@@ -49,6 +49,8 @@ Quast creates a subfolder with many different files. Take a look around in it. T
 ! What is the length of the longest contig?
 ! What is the contig N50 value?
 ! What is the size of the total assembly? How does this compare to the reference genome?
+! Completness? What is the coverage breadth %?
+! How many mismatches to the reference?
 ! Flere?
 ```  
 
