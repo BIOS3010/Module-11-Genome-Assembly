@@ -67,6 +67,7 @@ samtools index de_novo.bam
 
 We can see that the de novo assembly starts at position 20 on the reference. This is exactly where the first reads mapped. We can see that SPades has been less strict that we were when we made the consensus. We required a minimum of 10 reads mapped, which is why the consensus sequence started at position 112.  
 
-# Assembly quality  
+# Assembly quality assessment  
+
 
 
