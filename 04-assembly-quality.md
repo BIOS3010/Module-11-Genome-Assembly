@@ -80,5 +80,5 @@ SRR28726555.bam  SRR28726555.bam.bai  contigs.bam  contigs.bam.bai
 ```  
 Here I have mapped the Illumina reads to the Mpox reference using `Bowtie2` (`SRR28726555.bam` and `SRR28726555.bam.bai`) and also mapped the de novo assembled contigs to the reference (`contigs.bam` and `contigs.bam.bai`). You can download these files and open them in IGV (remember to also load the reference sequence under "Genome"). 
 ```diff
-Is there any correlation between the read coverage and where the different contigs have been assembled?   
+! Is there any correlation between the read coverage and where the different contigs have been assembled?   
 ```
