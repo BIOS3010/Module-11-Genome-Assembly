@@ -34,22 +34,20 @@ The quality of an assembly can be assessed in many ways, but one of the most com
 Run QUAST:
 ```bash
 module load QUAST/5.0.2-foss-2020a-Python-3.8.2
+# We use the Mpox reference genome GCF_014621545.1_ASM1462154v1_genomic.fna for comparison
 quast \
-    de_novo_mpox/scaffolds.fasta \
-    # Mpox reference for comparison
+    results/de_novo_mpox/scaffolds.fasta \
     -r data/GCF_014621545.1_ASM1462154v1_genomic.fna \
     -o quast_results \
     -t 2 
 ```
-Quast creates a subfolder with many different files. Take a look around in it. Then, look at the file called `report.txt`.
+Quast creates a subfolder with many different files. Take a look around in it. Then, look at the file called `report.txt` and see if you can answer these questions:  
 
 ```diff
 ! What is the length of the longest contig?
 ! What is the contig N50 value?
-! What is the size of the total assembly? How does this compare to the reference genome?
-! Completeness? What is the coverage breadth %?
-! How many mismatches to the reference?
-! Flere?
+! What is the size of the total assembly? How does this compare to the reference genome? How large fraction of the reference genome is covered (coverage breadth)?
+! How many mismatches are there compared to the reference?
 ```  
 
 There is also a PDF file which you can download to your computer to look at, and an interactive html report you can open in your browser.
@@ -66,50 +64,31 @@ module load BUSCO/5.0.0-foss-2020a
 
 Check which datasets of BUSCO genes are available with `busco --list-datasets`
 
-Then run BUSCO using the `poxviridae_odb10` dataset:  
+We will run BUSCO using the `poxviridae_odb10` dataset:  
 
 ```bash
 busco \
     -c 4 \
-    -i de_novo_mpox/scaffolds.fasta \
+    -i results/de_novo_mpox/scaffolds.fasta \
     -l poxviridae_odb10 \
     -m genome \
     -o busco
-```
-
-Kjøre `generate_plot.py`: https://busco.ezlab.org/busco_userguide.html#interpreting-the-results
-
-HELLE:
-
-In the folder created by BUSCO (canu_busco, for example) inspect the file whose name starts with short_summary.specific.insecta_odb10.
-
-The first line of the Results section looks something like this:
-
-C:99.9%[S:99.9%,D:0.0%],F:0.1%,M:-0.0%,n:781
-
-This means that 99.9 % were complete and 0.1 % were incomplete. Below this line are the numbers of genes in the different categories.
-
-```diff
-! What scores did you get?
-! How do you interpret these scores? Is the assembly complete?
 ```  
 
-Pair up with someone who used the other program (canu or flye) so you can compare BUSCO results. For the question below, have a look inside the canu_busco or flye_busco folder and check the files in there.
+Already on the screen you can see some BUSCO statistics. And you can also find more info in the file `busco/short_summary.specific.poxviridae_odb10.busco.txt`.   
 
-! Does one of the assemblies have more missing genes than the other?
-! Compare the list of missing genes. Are the same genes missing in both assemblies?
+```diff
+! How many complete and fragmented BUSCO genes were found?
+! Were there any missing genes?
+! Were there any duplicated genes?
+! Based on the BUSCO result, would you say that the assembly is complete?
+```  
 
-
-Which assembly is better?
-Finally, answer this question:
-
-! Can you, based on the combined results of *all* analyses we did, say which assembly (canu or flye) is best, and why?
-
-TANKE:
-VI MÅ KUNNE KONKLUDERE NOE OM KVALITETEN PÅ ASSEMBLIET. I FORHOLD TIL DE TRE C'ER. 
-HVOR "CONTIGUOUS" ER DE NOVO ASSEMBLIET?
-hVOR "CORRECT" SAMMENLIGNET MED REFERANSEN?
-HVOR "COMPLETE" ER ASSEMBLIET I FORHOLD TIL BUSCO-RESULTATENE?
-
-
-KAN VI MAPPE CONTIGSENE, ELLER SCAFFOLDS KANSKJE?, TIL REFERANSEN? KAN VI BRUKE MINIMAP2? KANSKJE JEG SKAL MAPPE READSENE TIL REFERANSEN MED BOWTIE2 OG GI DEM BAM-FILA? DET ER LITT MORSOMT Å SE PÅ DEKNINGEN I DE OMRÅDENE HVOR DET IKKE ER BLITT SATT SAMMEN NOEN CONTIGS. DETTE KAN KANSKJE FORKLARE HVORFOR VI HAR FÅTT FLERE CONTIGS. KANSKJE VI OGSÅ KAN BRUKE PAIRED-READS TIL Å FORSTÅ HVORDAN NOEN CONTIGS HAR BLITT SATT SAMMEN TIL SCAFFOLDS?
+**Bonus exercise**: In the folder `/storage/BIOS3010/Module11` there are the following files:
+```bash
+SRR28726555.bam  SRR28726555.bam.bai  contigs.bam  contigs.bam.bai
+```  
+Here I have mapped the Illumina reads to the Mpox reference using `Bowtie2` (`SRR28726555.bam` and `SRR28726555.bam.bai`) and also mapped the de novo assembled contigs to the reference (`contigs.bam` and `contigs.bam.bai`). You can download these files and open them in IGV (remember to also load the reference sequence under "Genome"). 
+```diff
+Is there any correlation between the read coverage and where the different contigs have been assembled?   
+```
