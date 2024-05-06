@@ -1,13 +1,3 @@
-QUAST kan bli brukt til å måle både "contiguity" og "correctness".
-
-TODO:
-Kanskje dette blir litt for likt med oppgavene i nr. 3...
-- [] Map the fastq reads to the reference genome with Bowtie2. JEG KAN GJØRE DETTE PÅ FORHÅND. LAGE EN SORTED BAM OG INDEX. SÅ KAN VI SE PÅ DEKNINGEN OG SAMMENLIGNE DETTE MED CONTIGSENE. DE MAPPER ALTSÅ CONTIGSENE MED MINIMAP.
-- [] Sort and index the bam file
-- [] Index the fasta file so that it can be loaded in IGV. 
-- [] Check if the contigs and scaffolds can be mapped to the reference using Minimap2.
-- [] Ask the students to view everything in IGV. 
-
 # Assembly quality assessment
 
 Doing _de novo_ assembly on Illumina sequenced SARS-CoV-2 genomes is often very "easy", meaning that we have such high coverage that we almost always get only a single contig representing the entire genome. This is of course a good thing, but it does not provide much opportunity for learning about the complexities of the assembly process. Therefore we will attempt to assemble the genome of the [Mpox virus](https://en.wikipedia.org/wiki/Mpox). Mpox belongs to the family _Poxviridae_ together with other viruses such as variola virus which causes smallpox (kopper). Poxviruses have large double-stranded DNA genomes. The Mpox genome consists of almost 200.000 kb and 181 protein coding genes. We will assemble a Mpox genome _de novo_ from Illumina sequences.  
