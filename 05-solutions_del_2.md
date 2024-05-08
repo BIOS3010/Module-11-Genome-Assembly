@@ -1,5 +1,8 @@
 # _de novo_ genome assembly  
 
+Run Spades:  
+`python3.6 SPAdes-3.15.5-Linux/bin/spades.py --corona -o results/de_novo/ -s data/SRR19910221.fastq`  
+
 After Spades I have these files in a folder called `results/de_novo`:
 
 ```bash
