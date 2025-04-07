@@ -4,11 +4,14 @@ Doing _de novo_ assembly on Illumina sequenced SARS-CoV-2 genomes is often very 
 
 Download Fastq reads. The commands assume you are working inside the `Module-11-Genome-Assembly` directory which is placed on your home directory.    
 ```bash
-sratoolkit.3.1.0-ubuntu64/bin/fastq-dump --split-files --outdir ~/Module-11-Genome-Assembly/data SRR28726555
+# Remember to load SRA tools first
+fastq-dump --split-3 --outdir ~/Module-11-Genome-Assembly/data SRR28726555
+```
 
-# Run de novo assembly with SPAdes
-module load SPAdes/3.15.2-foss-2019b
-python3.6 SPAdes-3.15.5-Linux/bin/spades.py \
+Run de novo assembly with SPAdes
+```bash
+# Remember to load Spades first 
+spades.py \
     -o results/de_novo_mpox/ \
     -1 data/SRR28726555_1.fastq -2 data/SRR28726555_2.fastq \
     --phred-offset 33
@@ -23,7 +26,7 @@ The quality of an assembly can be assessed in many ways, but one of the most com
 
 Run QUAST:
 ```bash
-module load QUAST/5.0.2-foss-2020a-Python-3.8.2
+module load QUAST/5.0.2-foss-2020b
 # We use the Mpox reference genome GCF_014621545.1_ASM1462154v1_genomic.fna for comparison
 quast \
     results/de_novo_mpox/scaffolds.fasta \
@@ -48,8 +51,11 @@ Another way to assess the quality of an assembly is to use the [BUSCO](https://b
 
 Load BUSCO:
 ```bash
+# Let's purge all loaded module to avoid potential dependency conflicts
 module --force purge
-module load BUSCO/5.0.0-foss-2020a
+
+# Then load BUSCO
+module load BUSCO/5.1.2-foss-2020b
 ```
 
 Check which datasets of BUSCO genes are available with `busco --list-datasets`
