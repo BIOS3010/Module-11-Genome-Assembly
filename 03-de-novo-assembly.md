@@ -8,8 +8,11 @@ One of the most popular _de novo_ genome assemblers is [SPAdes](https://cab.spbu
 # This assumes you're located in the Module-11-Genome-Assembly folder
 mkdir -p results/de_novo
 
+# Actiate Spades
+module load SPAdes/3.15.2-GCC-10.2.0
+
 # SPAdes has a dedicated SARS-CoV-2 model activated with the --corona flag
-python3.6 SPAdes-3.15.5-Linux/bin/spades.py --corona -o results/de_novo/ -s data/FASTQ_FILE
+spades.py --corona -o results/de_novo/ -s data/FASTQ_FILE
 ```
 
 The assembly runs very fast and produces a lot of info and files in the `results/de_novo` folder. Use `less` to look at the `spades.log`. Here you can see info about which k-mer sizes were used for example. The final assembly is in the `scaffolds.fasta` file. To see how many scaffolds were assembled, and info about their length, we can pull out only the fasta headers using `grep "^>" scaffolds.fasta`.
