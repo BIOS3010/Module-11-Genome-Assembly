@@ -26,9 +26,8 @@ There is a lot of software developed for visualizing read mapping files. We will
 First we need to convert the sam file to a sorted bam file (the reads are ordered according to where they align to the genome) and then create and index of the file. This is required for loading the files into IGV. 
 
 ```
-module load SAMtools/1.10-GCC-9.3.0 # Only do this on the server
-
-conda activate SAMTOOLS # Only do this if you work locally
+# Activate Samtools
+module load SAMtools/1.10-GCC-9.3.0 
 
 # Convert sam to bam and sort. Make sure you're in the results/mapping folder
 
