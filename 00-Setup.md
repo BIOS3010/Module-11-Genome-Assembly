@@ -9,13 +9,7 @@ Follow these steps to get set up.
    source ~/.bashrc
    ```
 
-3. To download fastq files from the SRA server we will use the SRA Toolkit developed by the NCBI: 
-```bash
-module use /home/BIOS3010/software/modules/all/:/opt/software/BIOS3010/modules/all/
-module load SRA-Toolkit/2.10.9-gompi-2020b
-```
-
-4. To map reads to a genome we will use a software called `Minimap2`. Install Minimap2 with conda:  
+3. To map reads to a genome we will use a software called `Minimap2`. Install Minimap2 with conda:  
    ```bash
    module load Miniconda3/4.9.2
    # We create separate environments for each software in this Module
@@ -24,14 +18,13 @@ module load SRA-Toolkit/2.10.9-gompi-2020b
    conda install -c bioconda minimap2
    ```
 
-6. To generate a consensus sequence we will use a program called `iVar`. Install iVar with conda using a pre-made environment file (yml file) that creates an environment with iVar. 
+4. To generate a consensus sequence we will use a program called `iVar`. Install iVar with conda using a pre-made environment file (yml file in the data folder) that creates an environment with iVar. 
 
    ```bash
-   # On the server do this:
-   module load Miniconda3/4.9.2 
-   conda env create --file data/conda-ivar.yml
+   # If conda is not activated already:
+   module load Miniconda3/4.9.2
 
-   # If you work locally do this:
-   conda env create --file data/conda-ivar.yml  
+   # (Make sure the file path to the yml file is correct)
+   conda env create --file data/conda-ivar.yml
    ```
 
