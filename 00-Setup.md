@@ -35,10 +35,3 @@ module load SRA-Toolkit/2.10.9-gompi-2020b
    conda env create --file data/conda-ivar.yml  
    ```
 
-7. For _de novo_ assembly we need to download `SPAdes`. We will do this also on the server to get the latest version.
-
-   ```bash
-   wget https://github.com/ablab/spades/releases/download/v3.15.5/SPAdes-3.15.5-Linux.tar.gz
-   tar -xzf SPAdes-3.15.5-Linux.tar.gz
-   ```
-  
