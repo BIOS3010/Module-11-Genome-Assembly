@@ -1,9 +1,8 @@
 # Get fastq files
-You should have cloned this GitHub repo to your home directory, and have a folder on your home directory called `sratoolkit.3.1.0-ubuntu64`. Then you can run the following command to download the SRA entry `SRR19910221` (or any other SRA entry you like):
 
 ```bash
-# ~/ is a shortcut for your home directory
-~/sratoolkit.3.1.0-ubuntu64/bin/fastq-dump --outdir ~/Module-11-Genome-Assembly/data SRR19910221
+module load SRA-Toolkit/2.10.9-gompi-2020b
+fastq-dump --outdir ~/Module-11-Genome-Assembly/data --split-3 SRR19910221
 ```  
 
 You should now have the following content in the data folder:
