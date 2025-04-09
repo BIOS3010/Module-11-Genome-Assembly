@@ -27,7 +27,7 @@ First we need to convert the sam file to a sorted bam file (the reads are ordere
 
 ```
 # Activate Samtools
-module load SAMtools/1.10-GCC-9.3.0 
+module load SAMtools/1.11-GCC-10.2.0 
 
 # Convert sam to bam and sort. Make sure you're in the results/mapping folder
 
