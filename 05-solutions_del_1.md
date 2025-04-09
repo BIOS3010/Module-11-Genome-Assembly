@@ -68,13 +68,13 @@ Example output:
 ```
 ```diff
 ! How many lines does the sam header cover?
-``` 
-2 lines:  
+```
 
+3 lines. The header lines in a sam file begins with "@". One solution is to count the number of lines beginning with "@":  
 ```bash
-# This extracts all lines beginning with "@" and then counts the number of lines.
-# You could also open the file with "less" and count the number of lines for example
-grep "^@" results/mapping/mapping.sam | wc -l
+# First we check the length of the header
+grep -c "^@" results/mapping/mapping.sam #"^@" means to find lines starting with "@". 
+# The header covers three lines in this case
 ```
 
 ```diff
@@ -82,10 +82,8 @@ grep "^@" results/mapping/mapping.sam | wc -l
 ```  
 
 SRR19910221.1
+
 ```bash
-# First we check the length of the header
-grep -c "^@" results/mapping/mapping.sam #"^@" means to find lines starting with "@". 
-# The header covers three lines in this case
 # We first pull out the first four lines, and then the last line
 cat results/mapping/mapping.sam | head -n 4 | tail -n 1
 ```
