@@ -69,10 +69,12 @@ Example output:
 ```diff
 ! How many lines does the sam header cover?
 ``` 
-90204 lines:
+2 lines:  
+
 ```bash
-wc -l results/mapping/mapping.sam
-3116 results/mapping/mapping.sam
+# This extracts all lines beginning with "@" and then counts the number of lines.
+# You could also open the file with "less" and count the number of lines for example
+grep "^@" results/mapping/mapping.sam | wc -l
 ```
 
 ```diff
