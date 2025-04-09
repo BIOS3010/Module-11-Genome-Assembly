@@ -107,7 +107,7 @@ If you for example zoom all the way out, then the numbers in the coverage bar on
 ```diff
 ! Are there any regions where the coverage is zero?
 ```
-Yes. For example the first 19 bp of the reference: 
+Yes. For example the first 19 bp of the reference:  
 ![IGV zero coverage](images/igv_zero_cov.png)
 
 ```diff
