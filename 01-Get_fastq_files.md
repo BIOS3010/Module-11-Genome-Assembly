@@ -1,3 +1,6 @@
+NB! Every time you log on to the server you need to activate the pre-installed BIOS3010 software:  
+`module use /home/BIOS3010/software/modules/all/:/opt/software/BIOS3010/modules/all/` 
+
 
 # Download PacBio HiFi reads
 In these exercises we will download and inspect fastq-files from genome sequencing projects of SARS-CoV-2, just like we did in Module 10. However, this time we will use PacBio Hifi reads generated with the [HiFiViral SARS-CoV-2 kit](https://www.pacb.com/research-focus/microbiology/public-health/covid-19-sequencing-tools-and-resources/). You can work either on the analysis server or locally. If you work locally I highly recommend that you have `conda` and `git` installed.  
