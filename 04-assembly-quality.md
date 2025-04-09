@@ -80,11 +80,11 @@ Already on the screen you can see some BUSCO statistics. And you can also find m
 ! Based on the BUSCO result, would you say that the assembly is complete?
 ```  
 
-**Bonus exercise**: In the folder `/storage/BIOS3010/Module11` there are the following files:
+**Bonus exercise**: In the folder `data/bowtie2` there are the following files:
 ```bash
-SRR28726555.bam  SRR28726555.bam.bai  contigs.bam  contigs.bam.bai
+SRR28726555.bam  SRR28726555.bam.bai  contigs.bam  contigs.bam.bai NC_063383.fasta 
 ```  
-Here I have mapped the Illumina reads to the Mpox reference using `Bowtie2` (`SRR28726555.bam` and `SRR28726555.bam.bai`) and also mapped the de novo assembled contigs to the reference (`contigs.bam` and `contigs.bam.bai`). You can download these files and open them in IGV (remember to also load the reference sequence under "Genome"). 
+Here I have mapped the Illumina reads to the Mpox reference NC_063383.fasta using `Bowtie2` (`SRR28726555.bam` and `SRR28726555.bam.bai`) and also mapped the de novo assembled contigs to the reference (`contigs.bam` and `contigs.bam.bai`). You can download these files and open them in IGV (remember to also load the reference sequence under "Genome"). 
 ```diff
 ! Is there any correlation between the read coverage and where the different contigs have been assembled?   
 ```
