@@ -69,7 +69,7 @@ Mapping the de novo assembly to the reference:
 ```bash
 conda activate MINIMAP2
 minimap2 -a data/NC_045512.fa results/de_novo/scaffolds.fasta > de_novo.sam
-module load SAMtools/1.10-GCC-9.3.0
+module load SAMtools/1.11-GCC-10.2.0
 samtools view -Sb de_novo.sam | samtools sort - -o de_novo.bam
 samtools index de_novo.bam
 ```
