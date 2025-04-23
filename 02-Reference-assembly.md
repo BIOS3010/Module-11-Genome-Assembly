@@ -1,5 +1,5 @@
-NB! Every time you log on to the server you need to activate the pre-installed BIOS3010 software:
-module use /home/BIOS3010/software/modules/all/:/opt/software/BIOS3010/modules/all/  
+NB! Every time you log on to the server you need to activate the pre-installed BIOS3010 software:  
+`module use /home/BIOS3010/software/modules/all/:/opt/software/BIOS3010/modules/all/`  
 
 # Reference-based genome assembly  
 The NCBI accession [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2/) is the official reference genome for SARS-CoV-2, the so-called Wuhan-Hu-1. In the folder called `data` you will find a copy of this sequence in `fasta` format as well as a gene annotation in `gff` format.  
