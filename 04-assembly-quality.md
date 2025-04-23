@@ -1,3 +1,5 @@
+NB! Every time you log on to the server you need to activate the pre-installed BIOS3010 software:  
+`module use /home/BIOS3010/software/modules/all/:/opt/software/BIOS3010/modules/all/`  
 # Assembly quality assessment
 
 Doing _de novo_ assembly on Illumina sequenced SARS-CoV-2 genomes is often very "easy", meaning that we have such high coverage that we almost always get only a single contig representing the entire genome. This is of course a good thing, but it does not provide much opportunity for learning about the complexities of the assembly process. Therefore we will attempt to assemble the genome of the [Mpox virus](https://en.wikipedia.org/wiki/Mpox). Mpox belongs to the family _Poxviridae_ together with other viruses such as variola virus which causes smallpox (kopper). Poxviruses have large double-stranded DNA genomes. The Mpox genome consists of almost 200.000 kb and 181 protein coding genes. We will assemble a Mpox genome _de novo_ from Illumina sequences.  
