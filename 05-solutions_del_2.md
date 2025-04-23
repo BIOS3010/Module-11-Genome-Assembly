@@ -1,5 +1,7 @@
 # _de novo_ genome assembly  
 
+## de novo assembly of SARS-CoV-2
+
 Run Spades:  
 ```bash
 module load SPAdes/3.15.2-GCC-10.2.0
@@ -45,7 +47,7 @@ drwxr-xr-x. 2 jonbra 17400      6 May  5 18:05 tmp
 ```
 
 ```bash
-grep "^>" results/de_novo_mpox/scaffolds.fasta
+grep "^>" results/de_novo/scaffolds.fasta
 >NODE_1_length_29817_cluster_1_candidate_1_domains_49
 ```
 
