@@ -1,3 +1,6 @@
+NB! Every time you log on to the server you need to activate the pre-installed BIOS3010 software:  
+`module use /home/BIOS3010/software/modules/all/:/opt/software/BIOS3010/modules/all/`  
+
 # _de novo_ genome assembly
 
 One of the most popular _de novo_ genome assemblers is [SPAdes](https://cab.spbu.ru/software/spades/). SPAdes uses the De Bruijn Graph approach and can take both short read libraries like Illumina, long read libraries like Nanopore, or a combination. SPAdes has several modes and options that can be tweaked to best suite the types of organism or sequencing library you have. We will assemble the SARS-CoV-2 genome using the PacBio HiFi reads. This is a fairly small haploid genome and not the most difficult job. Since we also have quite few reads this does not require that much computational power.
